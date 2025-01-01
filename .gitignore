@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Quartz build artifacts
+public/
+.quartz-cache/
+
+# Profiling output
+prof/
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
