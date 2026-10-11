@@ -22,11 +22,11 @@ date: 2026-09-27
 > - [[C8_Applied/01_Bootcamp/14_백엔드 비동기 처리와 큐|14_백엔드 비동기 처리와 큐]]
 
 > [!note]- Field Project
-> - [[C8_Applied/03_Field Project/02_자기소개서|02_자기소개서]]
-> - [[C8_Applied/03_Field Project/03_금융 IT 개발 실무|03_금융 IT 개발 실무]]
-> - [[C8_Applied/03_Field Project/04_클라우드 서비스 소개 및 응용|04_클라우드 서비스 소개 및 응용]]
-> - [[C8_Applied/03_Field Project/05_AI 에이전트 시대|05_AI 에이전트 시대]]
-> - [[C8_Applied/03_Field Project/06_3D Printer|06_3D Printer]]
+> - [[자기소개서_현대제철|자기소개서_현대제철]]
+> - [[한화자산운용_AX|한화자산운용_AI]]
+> - [[A1_클라우드 서비스 소개 및 응용|04_클라우드 서비스 소개 및 응용]]
+> - [[AI Agent|아이티코어스_AI 에이전트]]
+> - [[3D Printer|3D Printer]]
 
 > [!note]- Application Design
 > - [[C8_Applied/04_Application Design/01_TU-PBL과 종합설계 프로세스|01_TU-PBL과 종합설계 프로세스]]
@@ -43,7 +43,12 @@ date: 2026-09-27
 > - [[C8_Applied/04_Application Design/11_TU-PBL 팀 활동 보고서|11_TU-PBL 팀 활동 보고서]]
 
 > [!note]- Security
-> - [[C8_Applied/Security/01_AI 시대의 보안 기술과 산업 동향|01_AI 시대의 보안 기술과 산업 동향]]
+> - [[01_AI 보안_금융보안원|금융보안원_AI 보안]]
 > - [[C8_Applied/Security/02_Claude Mythos|02_Claude Mythos]]
-> - [[C8_Applied/Security/03_AI 시대의 시스템 보안 프로그램 개발|03_AI 시대의 시스템 보안 프로그램 개발]]
-> - [[C8_Applied/Security/04_개인정보 보호|04_개인정보 보호]]
+> - [[NVIDIA_AI 및 보안|03_]]
+> - [[03_개인정보 보호|03_개인정보 보호]]
+
+> [!note]- FDE
+> - [[FDE_Palantir|Palantir]]
+> - [[FDE_Career|FDE 커리어]]
+> - [[FDE_KT|FDE KT]]

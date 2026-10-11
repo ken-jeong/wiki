@@ -47,15 +47,12 @@ down:
 - 예시
 	- **TCP**: 연결 지향, Handshake
 	- **UDP**: 비연결 지향
-- **포트 번호**(Port Number)로 프로세스를 식별한다.
-- *Process to Process*
 
 #### L3. 네트워크 계층 (Network Layer)
 - 논리적 주소(**IP 주소**)를 기반으로, 데이터가 목적지까지 찾아가는 최적의 경로(라우터-**라우팅**) 결정
 	- **CIDR**
 	- **Subnet Mask**
 	- **ARP** (Address Resolution Protocol)
-- *Host to Host*
 
 네트워크 계층만 사용할 경우 여러 응용이 동시에 통신 불가능
 

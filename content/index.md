@@ -21,9 +21,6 @@ date: 2026-09-27
 > - [[C7_Methodologies/index|C7_Methodologies]] — 인공지능, PyTorch, 예측·인과추론·강화학습, LLM, MLOps
 > - [[C8_Applied/index|C8_Applied]] — 부트캠프, 현장 프로젝트, 응용설계, 보안
 
-> [!note]- Ontology
-> 작업 중
-
 > [!note]- PARA
 > 자료의 활용 상태에 따른 분류
 > - **P1_Project** — 목표와 완료 시점이 있는 현재 프로젝트

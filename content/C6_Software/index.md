@@ -58,14 +58,14 @@ date: 2026-09-27
 > - [[C6_Software/04_Web Service Programming/02_자바 웹 개발을 위한 환경 구축|02_자바 웹 개발을 위한 환경 구축]]
 > - [[C6_Software/04_Web Service Programming/03_웹 프로그래밍의 기초|03_웹 프로그래밍의 기초]]
 > - [[C6_Software/04_Web Service Programming/05_서블릿의 이해|05_서블릿의 이해]]
-> - [[C6_Software/04_Web Service Programming/06_MVC 패턴과 JDBC|06_MVC 패턴과 JDBC]]
-> - [[C6_Software/04_Web Service Programming/07_뉴스 기사 관리 웹 서비스 구현|07_뉴스 기사 관리 웹 서비스 구현]]
-> - [[C6_Software/04_Web Service Programming/08_리스너와 필터|08_리스너와 필터]]
-> - [[C6_Software/04_Web Service Programming/09A_Backend 기초 & API 설계|09A_Backend 기초 & API 설계]]
-> - [[C6_Software/04_Web Service Programming/09A_REST API 개발|09A_REST API 개발]]
-> - [[C6_Software/04_Web Service Programming/09_REST API 개발|09_REST API 개발]]
-> - [[C6_Software/04_Web Service Programming/10_스프링 프레임워크|10_스프링 프레임워크]]
-> - [[C6_Software/04_Web Service Programming/11_설계 프로젝트|11_설계 프로젝트]]
+> - [[08_MVC 패턴의 이해|MVC 패턴의 이해]]
+> - [[10_뉴스 기사 관리 웹 서비스|08_뉴스 기사 관리 웹 서비스 구현]]
+> - [[11_리스너와 필터|09_리스너와 필터]]
+> - [[12A_Backend 기초 & API 설계|11A_Backend 기초 & API 설계]]
+> - [[12A_REST API 개발|11A_REST API 개발]]
+> - [[12_REST API 개발|11_REST API 개발]]
+> - [[13_스프링 프레임워크|11_스프링 프레임워크]]
+> - 13_설계 프로젝트
 
 ![Apache](https://img.shields.io/badge/Apache-D22128?logo=apache&logoColor=white) ![Tomcat](https://img.shields.io/badge/Tomcat-F8DC75?logo=apachetomcat&logoColor=black) ![JSP](https://img.shields.io/badge/JSP-007396?logo=openjdk&logoColor=white)
 

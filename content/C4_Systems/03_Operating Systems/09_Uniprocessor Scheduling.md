@@ -85,6 +85,70 @@ date: 2026-04-08
 
 ![[Scheduling_Algorithms.png]]
 
+```mermaid
+block-beta
+    columns 21
+
+    fcfs["FCFS"] fa["A"]:3 space:17
+    space space:3 fb["B"]:6 space:11
+    space space:9 fc["C"]:4 space:7
+    space space:13 fd["D"]:5 space:2
+    space space:18 fe["E"]:2
+
+    spn["SPN"] pa["A"]:3 space:17
+    space space:3 pb["B"]:6 space:11
+    space space:11 pc["C"]:4 space:5
+    space space:15 pd["D"]:5
+    space space:9 pe["E"]:2 space:9
+
+    srt["SRT"] sa["A"]:3 space:17
+    space space:3 sb1["B"] space:6 sb2["B"]:5 space:5
+    space space:4 sc["C"]:4 space:12
+    space space:15 sd["D"]:5
+    space space:8 se["E"]:2 space:10
+
+    rr4["RR (q=4)"] ra["A"]:3 space:17
+    space space:3 rb1["B"]:4 space:8 rb2["B"]:2 space:3
+    space space:7 rc["C"]:4 space:9
+    space space:11 rd1["D"]:4 space:4 rd2["D"]
+    space space:17 re["E"]:2 space
+
+    rr1["RR (q=1)"] qa1["A"]:2 space qa2["A"] space:16
+    space space:2 qb1["B"] space qb2["B"] space qb3["B"] space:2 qb4["B"] space:3 qb5["B"] space:3 qb6["B"] space:2
+    space space:5 qc1["C"] space:2 qc2["C"] space:3 qc3["C"] space:3 qc4["C"] space:3
+    space space:7 qd1["D"] space:3 qd2["D"] space:3 qd3["D"] space:2 qd4["D"]:2
+    space space:10 qe1["E"] space:3 qe2["E"] space:5
+
+    hrrn["HRRN"] ha["A"]:3 space:17
+    space space:3 hb["B"]:6 space:11
+    space space:9 hc["C"]:4 space:7
+    space space:15 hd["D"]:5
+    space space:13 he["E"]:2 space:5
+
+    feedback2["Feedback (q=2)"] ua1["A"]:2 space ua2["A"] space:16
+    space space:2 ub1["B"] space:2 ub2["B"]:2 space:7 ub3["B"]:3 space:3
+    space space:4 uc1["C"] space:4 uc2["C"]:2 space:6 uc3["C"] space:2
+    space space:7 ud1["D"] space:3 ud2["D"]:2 space:5 ud3["D"]:2
+    space space:8 ue1["E"] space:4 ue2["E"] space:6
+
+    feedback1["Feedback (q=1)"] va1["A"]:2 space va2["A"] space:16
+    space space:2 vb1["B"] space:2 vb2["B"] space:5 vb3["B"] space:2 vb4["B"] space:2 vb5["B"] space vb6["B"]
+    space space:4 vc1["C"] space:2 vc2["C"] space:4 vc3["C"] space:2 vc4["C"] space:4
+    space space:6 vd1["D"] space:2 vd2["D"] space:3 vd3["D"] space:2 vd4["D"] space vd5["D"] space
+    space space:8 ve1["E"] space ve2["E"] space:9
+
+    classDef process fill:#fff,stroke:#000,color:#000,rx:0,ry:0
+    classDef algorithm fill:#fff,stroke:none,color:#000,font-weight:bold
+
+    class fa,fb,fc,fd,fe,pa,pb,pc,pd,pe,sa,sb1,sb2,sc,sd,se process
+    class ra,rb1,rb2,rc,rd1,rd2,re process
+    class qa1,qa2,qb1,qb2,qb3,qb4,qb5,qb6,qc1,qc2,qc3,qc4,qd1,qd2,qd3,qd4,qe1,qe2 process
+    class ha,hb,hc,hd,he process
+    class ua1,ua2,ub1,ub2,ub3,uc1,uc2,uc3,ud1,ud2,ud3,ue1,ue2 process
+    class va1,va2,vb1,vb2,vb3,vb4,vb5,vb6,vc1,vc2,vc3,vc4,vd1,vd2,vd3,vd4,vd5,ve1,ve2 process
+    class fcfs,spn,srt,rr4,rr1,hrrn,feedback2,feedback1 algorithm
+```
+
 #### (1) FCFS
 ![|500](https://velog.velcdn.com/images/seokjun0915/post/fac7af21-12e4-481a-a642-717ab06dd1e8/image.jpeg)
 
