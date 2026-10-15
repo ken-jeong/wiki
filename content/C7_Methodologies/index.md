@@ -4,7 +4,7 @@ aliases:
 type: Index
 tags: []
 draft: false
-date: 2026-09-27
+date: 2026-10-15
 ---
 # C7_Methodologies
 > 인공지능 모델의 학습과 운영에 사용하는 방법론을 정리한다.

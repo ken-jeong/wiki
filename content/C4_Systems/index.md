@@ -4,7 +4,7 @@ aliases:
 type: Index
 tags: []
 draft: false
-date: 2026-09-27
+date: 2026-10-15
 ---
 # C4_Systems
 > 컴퓨터 시스템의 구성과 관리 원리를 정리한다.
@@ -30,8 +30,8 @@ date: 2026-09-27
 > - [[C4_Systems/02_Database Systems/01_데이터베이스 시스템|01_데이터베이스 시스템]]
 > - [[C4_Systems/02_Database Systems/02_관계형 데이터 모델|02_관계형 데이터 모델]]
 > - [[C4_Systems/02_Database Systems/03_관계 대수|03_관계 대수]]
-> - [[C4_Systems/02_Database Systems/04A_SQL VIEW|04A_SQL VIEW]]
 > - [[C4_Systems/02_Database Systems/04_SQL|04_SQL]]
+> - [[C4_Systems/02_Database Systems/04A_SQL VIEW|04A_SQL VIEW]]
 > - [[C4_Systems/02_Database Systems/05_개념적 설계와 논리적 설계|05_개념적 설계와 논리적 설계]]
 > - [[C4_Systems/02_Database Systems/06_정규화|06_정규화]]
 > - [[C4_Systems/02_Database Systems/07_물리적 설계|07_물리적 설계]]
@@ -44,7 +44,7 @@ date: 2026-09-27
 > - [[C4_Systems/03_Operating Systems/02_OS Overview|02_OS Overview]]
 > - [[C4_Systems/03_Operating Systems/03_Process Description & Control|03_Process Description & Control]]
 > - [[C4_Systems/03_Operating Systems/04_Thread|04_Thread]]
-> - [[C4_Systems/03_Operating Systems/05_병행성 (상호배제와 동기화)|05_병행성 (상호배제와 동기화)]]
+> - [[C4_Systems/03_Operating Systems/05_병행성 (상호 배제와 동기화)|05_병행성 (상호 배제와 동기화)]]
 > - [[C4_Systems/03_Operating Systems/06_병행성 (교착상태와 기아)|06_병행성 (교착상태와 기아)]]
 > - [[C4_Systems/03_Operating Systems/07_메모리 관리|07_메모리 관리]]
 > - [[C4_Systems/03_Operating Systems/08_가상 메모리|08_가상 메모리]]
@@ -52,17 +52,17 @@ date: 2026-09-27
 
 > [!note]- Embedded Systems
 > 임베디드 리눅스 개발환경, 부트로더·커널·루트 파일시스템, 디바이스 드라이버와 응용 개발
-> - [[01_임베디드 리눅스|01_임베디드 리눅스]]
-> - [[00_가상 머신|00_가상 머신]]
-> - 01-2_임베디드 리눅스
+> - [[C4_Systems/04_Embedded Systems/01_임베디드 리눅스|01_임베디드 리눅스]]
 > - [[C4_Systems/04_Embedded Systems/02-1_개발 환경|02-1_개발 환경]]
 > - [[C4_Systems/04_Embedded Systems/02-2_툴체인 구축|02-2_툴체인 구축]]
 > - [[C4_Systems/04_Embedded Systems/02-3_설치 결과|02-3_설치 결과]]
-> - [[03-1_부트로더 개념|03-1_부트로더 개념]]
-> - [[03-2_부트로더 종류|03-2_부트로더 종류]]
-> - [[03-3_부트로더 실습|03-3_부트로더 실습]]
-> - [[04-1_리눅스 커널|04-1_리눅스 커널]]
-> - [[05_루트 파일 시스템|05_루트 파일 시스템]]
+> - [[C4_Systems/04_Embedded Systems/03-1_부트로더 개념|03-1_부트로더 개념]]
+> - [[C4_Systems/04_Embedded Systems/03-2_부트로더 종류|03-2_부트로더 종류]]
+> - [[C4_Systems/04_Embedded Systems/03-3_부트로더 실습|03-3_부트로더 실습]]
+> - [[C4_Systems/04_Embedded Systems/03-4_RaspberryPi U-Boot 실습|03-4_RaspberryPi U-Boot 실습]]
+> - [[C4_Systems/04_Embedded Systems/04_리눅스 커널|04_리눅스 커널]]
+> - [[C4_Systems/04_Embedded Systems/05-1_루트 파일 시스템|05-1_루트 파일 시스템]]
+> - [[C4_Systems/04_Embedded Systems/05-2_BusyBox|05-2_BusyBox]]
 > - [[C4_Systems/04_Embedded Systems/06_하드웨어 장치|06_하드웨어 장치]]
 > - [[C4_Systems/04_Embedded Systems/07_라이브러리와 응용|07_라이브러리와 응용]]
 > - [[C4_Systems/04_Embedded Systems/08_리눅스 빌드시스템|08_리눅스 빌드시스템]]
@@ -74,13 +74,14 @@ date: 2026-09-27
 
 > [!note]- System Programming
 > 프로세스와 POSIX 스레드, 파일 입출력, 시그널과 IPC, 병렬 프로그래밍
-> - [[01-1_프로세스 개요|01-1_프로세스]]
-> - [[01-2_프로세스 시스템 콜|01-2_System Calls]]
-> - [[01-3_셸|01-3_Shell]]
-> - [[01-4_프로세스 그룹|01-4_프로세스 그룹]]
+> - [[C4_Systems/05_System Programming/01-1_프로세스 개요|01-1_프로세스 개요]]
+> - [[C4_Systems/05_System Programming/01-2_프로세스 제어 시스템 콜|01-2_프로세스 제어 시스템 콜]]
+> - [[C4_Systems/05_System Programming/01-3_셸|01-3_셸]]
+> - [[C4_Systems/05_System Programming/01-4_프로세스 그룹|01-4_프로세스 그룹]]
 > - [[C4_Systems/05_System Programming/02_스레드|02_스레드]]
-> - [[03-1_pthread 개요|03-1_pthread]]
-> - [[04_Time Management|04_Time Management]]
+> - [[C4_Systems/05_System Programming/03-1_pthread 개요|03-1_pthread 개요]]
+> - [[C4_Systems/05_System Programming/03-2_pthread 동기화|03-2_pthread 동기화]]
+> - [[C4_Systems/05_System Programming/04_시간 관리|04_시간 관리]]
 > - [[C4_Systems/05_System Programming/05_pipe IPC|05_pipe IPC]]
 > - [[C4_Systems/05_System Programming/06_Advanced IPC|06_Advanced IPC]]
 > - [[C4_Systems/05_System Programming/07_signal|07_signal]]
@@ -92,22 +93,21 @@ date: 2026-09-27
 ![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black) ![POSIX](https://img.shields.io/badge/POSIX-1D1D1D?logo=linuxfoundation&logoColor=white)
 
 > [!note]- Knowledge Systems
-> - [[PKM|01_PKM]]
-> - [[Markdown|02_Markdown]]
-> - [[A1_지식 경영|03_Tacit Knowledge]]
-> - [[Data Lake|03_Data Lake]]
-> - [[Ontology|04_Ontology]]
+> - [[P1_Project/블로그 관리/PKM|PKM]]
+> - [[P1_Project/블로그 관리/Markdown|Markdown]]
+> - [[C0_Liberal Arts/06_Business Management/A1_지식 경영|Tacit Knowledge]]
+> - [[C8_Applied/Applied AI/Data Lake|Data Lake]]
+> - [[C8_Applied/AI Agent/Ontology|Ontology]]
 >
-> **Knowledge Graphs**
-> - [[01_지식 그래프란 무엇인가|01_지식 그래프란 무엇인가]]
-> - [[02_지식 그래프 데이터 모델|02_지식 그래프 데이터 모델]]
-> - [[03_지식 그래프를 어떻게 만드는가 (스키마 설계)|03_지식 그래프를 어떻게 만드는가 (스키마 설계)]]
-> - [[04_구조화 데이터로부터 지식 그래프 만들기|04_구조화 데이터로부터 지식 그래프 만들기]]
-> - [[05_텍스트로부터 지식 그래프 만들기|05_텍스트로부터 지식 그래프 만들기]]
-> - [[06_지식 그래프 추론 알고리즘|06_지식 그래프 추론 알고리즘]]
-> - [[07_사용자는 지식 그래프와 어떻게 상호작용하는가|07_사용자는 지식 그래프와 어떻게 상호작용하는가]]
-> - [[08_지식 그래프를 어떻게 진화시키는가|08_지식 그래프를 어떻게 진화시키는가]]
-> - 09_지식 그래프의 고부가가치 활용 사례
-> - [[10_지식 그래프와 AI의 관계|10_지식 그래프와 AI의 관계]]
+> **Knowledge Graphs (Archive)**
+> - [[P4_Archive/Knowledge Graphs/01_지식 그래프란 무엇인가|01_지식 그래프란 무엇인가]]
+> - [[P4_Archive/Knowledge Graphs/02_지식 그래프 데이터 모델|02_지식 그래프 데이터 모델]]
+> - [[P4_Archive/Knowledge Graphs/03_지식 그래프를 어떻게 만드는가 (스키마 설계)|03_지식 그래프를 어떻게 만드는가 (스키마 설계)]]
+> - [[P4_Archive/Knowledge Graphs/04_구조화 데이터로부터 지식 그래프 만들기|04_구조화 데이터로부터 지식 그래프 만들기]]
+> - [[P4_Archive/Knowledge Graphs/05_텍스트로부터 지식 그래프 만들기|05_텍스트로부터 지식 그래프 만들기]]
+> - [[P4_Archive/Knowledge Graphs/06_지식 그래프 추론 알고리즘|06_지식 그래프 추론 알고리즘]]
+> - [[P4_Archive/Knowledge Graphs/07_사용자는 지식 그래프와 어떻게 상호작용하는가|07_사용자는 지식 그래프와 어떻게 상호작용하는가]]
+> - [[P4_Archive/Knowledge Graphs/08_지식 그래프를 어떻게 진화시키는가|08_지식 그래프를 어떻게 진화시키는가]]
+> - [[P4_Archive/Knowledge Graphs/10_지식 그래프와 AI의 관계|10_지식 그래프와 AI의 관계]]
 >
-> - [[LangGraph|07_LangGraph]]
+> - [[C8_Applied/AI Agent/LangGraph|LangGraph]]

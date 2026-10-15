@@ -93,7 +93,7 @@ date: 2026-04-29
 	1. 일반 함수 호출은 호출한 쪽이 멈추고 함수가 끝나야 돌아온다. (단일 실행 흐름)
 	2. `pthread_create()`로 만든 스레드는 생성 즉시 별개의 실행 흐름으로 갈라져 동시에 진행된다.
 
-- **멀티쓰레딩 환경의 공유 관계**:
+- **멀티스레딩 환경의 공유 관계**:
 	- **프로세스**(태스크) 단위로 공유되는 것: 가상 주소 공간, 파일, I/O 자원, 다른 프로세스에 대한 접근 제어
 	- **스레드**마다 별개로 갖는 것: 실행 상태(수행/준비/블록), CPU 레지스터 문맥, 실행 스택, 지역변수 저장 공간
 	- 즉 **한 프로세스 내 모든 스레드는 코드·데이터·파일을 공유**하지만, ==레지스터와 스택은 각자 따로 가진다.== (단일 스레드 모델은 이 모든 것을 하나만 가짐)
@@ -131,120 +131,39 @@ date: 2026-04-29
 	- `pthread_create()`는 1~2초 수준으로, 스레드가 훨씬 가볍다.
 
 ## 2. 프로세스/스레드 생성 함수
-### 2.1. fork() 시스템 콜
-- **fork() (프로세스 생성)**:
-	- 한 번 호출되지만 부모와 자식 양쪽에서 반환된다.
-	- 부모에게는 자식의 PID(0이 아닌 값), 자식에게는 0이 반환되므로 이 반환값으로 분기한다.
+> 프로세스=복사 / 스레드=공유
 
-```c
-if (pid == 0) { /* 자식 코드 */ }
-else { /* 부모 코드 */ }
-```
+### 2.1. 프로세스 제어 시스템 콜 `fork()`
+[[01-2_프로세스 제어 시스템 콜]]
+- 해당 노트의 `fork()` 및 예제 참조
 
-#### (1) 예제
-```c
-/* test_fork2.c: 같은 변수 접근 */
-#include <sys/types.h>
-#include <unistd.h>
-// 함수 원형: pid_t fork(void);
+### 2.2. `pthread_create()`
+[[03-1_pthread 개요]]
+- 해당 노트의 thread_create() 및 예제 참조
 
-int glob = 6;
-char buf[] = "a write to stdout\n";
-
-int main(void) {
-	int var = 88;
-	pid_t pid;
-	
-	if (write(STDOUT_FILENO, buf, sizeof(buf)) != sizeof(buf)) {
-		perror(“write error”);
-		exit(1);
-	}
-	printf("before fork\n"); /* we don't flush stdout */
-	
-	if ( (pid = fork()) < 0) {
-		perror(“fork error”);
-		exit(1);
-	} else if (pid == 0) { // **자식 프로세스**: 0 반환
-		/* modify variables */
-		glob++;
-		var++;
-	} else { // **부모 프로세스**: 자식 프로세스의 PID 반환 (non-zero)
-		sleep(2);
-	}
-	printf("pid = %d, glob = %d, var = %d\n", getpid(), glob, var
-	// 부모는 glob=6, var=88
-	// 자식은 glob=7, var=89
-	
-	exit(0);
-}
-```
-
-- 예제(`test_fork2.c`)의 핵심은
-	- **fork 후 부모·자식이 변수를 복사해서 따로 가진다**는 점이다.
-	- 자식이 `glob++; var++`를 해도 부모 값은 그대로이다.
-	- 실행 결과에서 자식은 `glob=7, var=89`, 부모는 `glob=6, var=88`로 서로 독립적임이 확인된다.
-
-### 2.2. pthread_create()
-- **pthread (POSIX Thread)**: IEEE POSIX 1003.1c 표준
-	- `pthread.h`를 include하고 컴파일 시 `-lpthread` 옵션을 붙인다. (`gcc -o test test.c -lpthread`)
-	- 리눅스의 pthread는 `clone()` 시스템 콜로 구현된 **커널 수준 스레드**이다.
-	- 생성은 `pthread_create(&tid, NULL, 함수, 인자)`, 종료는 `pthread_exit(NULL)`로 한다.
-
-- 여기서 fork와 결정적으로 다른 점이 나온다.
-	- pthread 예제에서는 전역변수 `glob`을 **모든 스레드가 공유**하므로 6→7→8→9→10→11로 누적 증가한다.
-	- 반면 지역변수 `var`는 각 스레드 스택에 따로 있어 항상 89로 동일하다.
-	- 앞의 fork 예제와 비교하면 "프로세스=복사 / 스레드=공유"의 차이가 명확해진다.
-
-#### (1) 예제
-```c
-#include <pthread.h> // gcc test.c -o test -lpthread
-
-#define NUM_THREADS 5
-
-void *PrintHello(void *threadid) {
-	printf("Hello World! It’s me, thread #%ld \n", threadid);
-	pthread_exit(NULL);
-}
-
-int main (int argc, char *argv[]) {
-	pthread_t threads[NUM_THREADS];
-	int rc, t;
-	
-	for (t=0;t < NUM_THREADS;t++) {
-		printf("In main: creating thread %d\n", t);
-		
-		// 스레드 생성 (&thread, NULL, 함수명, 인자)
-		rc = pthread_create(&threads[t], NULL, PrintHello, (void *)t);
-		
-		if (rc) {
-			printf("ERROR; return code from pthread_create() is %d\n", rc);
-			exit(-1);
-		}
-	}
-	pthread_exit(NULL); // 스레드 종료
-}
-```
+> 전역 변수를 모든 스레드가 공유한다.
+> 지역 변수는 각 스레드 스택에 따로 있다.
 
 ### 2.3. 활용 사례
-- **웹 서버**
-	- Dispatcher thread가 요청을 받아 Worker thread에 분배하고,
-	- Worker는 캐시 확인 후 페이지를 반환
+**웹 서버**
+- Dispatcher thread가 요청을 받아 Worker thread에 분배하고,
+- Worker는 캐시 확인 후 페이지를 반환
 
-- **RPC(원격 프로시저 호출)**
-	- 여러 스레드가 각각 다른 서버에 RPC 요청을 보내 응답 대기 시간을 중첩
+**RPC(원격 프로시저 호출)**
+- 여러 스레드가 각각 다른 서버에 RPC 요청을 보내 응답 대기 시간을 중첩
 
 #### cf. TCP 소켓 통신의 서버/클라이언트 흐름 예
-- 윈도우 서버 프로그래밍 발전사
-	1. **초기**: WSAAsyncSelect (메시지 기반)
-	2. **중기**: WSAAsyncEvent (이벤트 신호 기반)
-	3. **발전**: Overlapped I/O (비동기 결과 통보)
-		- Event 방식 (I), Completion Routine 방식 (II)
-	4. **완성**: **IOCP**(I/O Completion Port) = Thread Pool + 비동기 I/O
+윈도우 서버 프로그래밍 발전사
+1. **초기**: WSAAsyncSelect (메시지 기반)
+2. **중기**: WSAAsyncEvent (이벤트 신호 기반)
+3. **발전**: Overlapped I/O (비동기 결과 통보)
+	- Event 방식 (I), Completion Routine 방식 (II)
+4. **완성**: **IOCP**(I/O Completion Port) = Thread Pool + 비동기 I/O
 
 > 흐름 과정에서 **bind()가 명시적/암묵적으로 어떻게 호출되는지**
 
-1. **서버의 accept()는 내부적으로 새로운 소켓(nsd)을 만들어 클라이언트와 1:1 통신을 담당시킨다.**
-2. **클라이언트는 명시적으로 bind()를 호출하지 않지만, connect() 내부에서 자동으로 임시 포트가 bind된다.**
+5. **서버의 accept()는 내부적으로 새로운 소켓(nsd)을 만들어 클라이언트와 1:1 통신을 담당시킨다.**
+6. **클라이언트는 명시적으로 bind()를 호출하지 않지만, connect() 내부에서 자동으로 임시 포트가 bind된다.**
 
 ```c
 // ===== Server =====
@@ -282,45 +201,45 @@ svc(sd);									// 서버와 통신
 close(sd);
 ```
 
-- 서버 측: accept()의 동작
-	- `sd`(listening socket)는 **연결을 받기만 하는 전용 소켓**
-	- `accept()`는 새 연결이 들어올 때마다 **새로운 소켓 `nsd`를 생성**하여 반환
-	- `nsd`는 해당 클라이언트와의 **1:1 통신 전용 소켓**
-	- 즉, 같은 포트(예: 80)에 여러 클라이언트가 붙어도 각각 별도의 nsd로 구분됨 (4-tuple로 식별)
+서버 측: accept()의 동작
+- `sd`(listening socket)는 **연결을 받기만 하는 전용 소켓**
+- `accept()`는 새 연결이 들어올 때마다 **새로운 소켓 `nsd`를 생성**하여 반환
+- `nsd`는 해당 클라이언트와의 **1:1 통신 전용 소켓**
+- 즉, 같은 포트(예: 80)에 여러 클라이언트가 붙어도 각각 별도의 nsd로 구분됨 (4-tuple로 식별)
 
-- 클라이언트 측: 암묵적 bind
-	- 클라이언트는 자신의 포트 번호를 신경 쓸 필요가 없음
-	- `connect()` 호출 시 OS가 **사용 가능한 임시 포트(ephemeral port)를 자동 할당**하여 내부적으로 bind
-	- 그래서 클라이언트 코드에는 명시적 bind()가 없음
+클라이언트 측: 암묵적 bind
+- 클라이언트는 자신의 포트 번호를 신경 쓸 필요가 없음
+- `connect()` 호출 시 OS가 **사용 가능한 임시 포트(ephemeral port)를 자동 할당**하여 내부적으로 bind
+- 그래서 클라이언트 코드에는 명시적 bind()가 없음
 
-- 멀티쓰레딩/멀티프로세싱과의 연결
-	- `svc(nsd)`를 처리하는 부분에서 보통 fork() 또는 pthread_create()를 사용
-	- 한 서버가 동시에 여러 클라이언트를 처리할 수 있는 이유 = 새 nsd마다 새로운 스레드/프로세스 배정
-	- 여기서 앞서 정리한 **스레드 풀(Thread Pool)** 개념이 활용됨 (매번 생성/종료 대신 미리 만들어둔 풀에서 꺼내 씀)
+멀티스레딩/멀티프로세싱과의 연결
+- `svc(nsd)`를 처리하는 부분에서 보통 fork() 또는 pthread_create()를 사용
+- 한 서버가 동시에 여러 클라이언트를 처리할 수 있는 이유 = 새 nsd마다 새로운 스레드/프로세스 배정
+- 여기서 앞서 정리한 **스레드 풀(Thread Pool)** 개념이 활용됨 (매번 생성/종료 대신 미리 만들어둔 풀에서 꺼내 씀)
 
-## 3. 스레드의 유형
-|    구분    |    사용자 수준 스레드(ULT)     |   커널 수준 스레드(KLT)   |
+## 3. 스레드의 수준
+|    구분    |    유저 레벨 스레드 (ULT)     |  커널 레벨 스레드 (KLT)   |
 | :------: | :--------------------: | :----------------: |
 |  관리 주체   | 응용 프로그램이 스레드 라이브러리를 통해 |       커널이 직접       |
 | 커널 인지 여부 |   ==커널은 스레드 존재를 모름==   | ==커널이 문맥·스케줄링 관리== |
 |    예     |    cthread, pthread    |      Windows       |
 
-### 3.1. 사용자 수준 스레드 (ULT)
-- **사용자 수준 스레드 장점**:
-	- 스레드 전환 시 커널 모드 전환이 필요 없어 오버헤드 절약,
-	- 응용에 맞는 스케줄링 가능,
-	- 모든 OS에서 동작
+### 3.1. 유저 레벨 스레드 (ULT)
+**사용자 수준 스레드 장점**
+- 스레드 전환 시 커널 모드 전환이 필요 없어 오버헤드 절약,
+- 응용에 맞는 스케줄링 가능,
+- 모든 OS에서 동작
 
-- **사용자 수준 스레드 단점**:
-	- 한 스레드가 블로킹 시스템 콜을 하면 **같은 프로세스의 모든 스레드가 함께 블록**됨,
-	- 멀티프로세서 이점을 살리지 못함,
-	- 커널 루틴 자체는 멀티쓰레딩 불가
+**사용자 수준 스레드 단점**
+- 한 스레드가 블로킹 시스템 콜을 하면 **같은 프로세스의 모든 스레드가 함께 블록**됨,
+- 멀티프로세서 이점을 살리지 못함,
+- 커널 루틴 자체는 멀티스레딩 불가
 
 - 성능 표(30쪽)를 보면
 	- Null Fork 연산이 ULT 34, KLT 948, 프로세스 11,300(μs)로,
 	- 사용자 수준 스레드가 가장 빠르고 프로세스 생성이 압도적으로 느리다.
 
-### 3.2. 커널 수준 스레드 (KLT)
+### 3.2. 커널 레벨 스레드 (KLT)
 - 장점:
 	- 다중처리기 활용 가능
 
@@ -341,40 +260,5 @@ close(sd);
 - **1:M**: Ra(Clouds), Emerald (스레드가 프로세스 간 이동 가능)
 - **M:N**: TRIX
 
----
-
-## 4. 멀티코어와 멀티쓰레딩
-- **Amdahl의 법칙**으로 병렬화 성능 한계를 설명한다.
-	- $\text{속도향상} = \dfrac{1}{(1-f) + \dfrac{f}{N}}$
-	- 여기서 f는 병렬화 가능한 코드 비율, (1−f)는 순차적으로만 실행되는 코드 비율, N은 프로세서 개수이다.
-	- **순차 부분(1−f)이 전체 속도향상의 상한을 결정**하기 때문에, 병렬 비율이 낮으면 코어를 아무리 늘려도 효과가 제한된다.
-
-- 또한 실제로는 멀티프로세서 간 통신, 작업 분배, 캐시 일관성 유지 같은 **오버헤드** 때문에, 코어 수를 늘릴수록 속도향상이 계속 오르지 않고 어느 지점에서 정점을 찍고 오히려 꺾인다. (34쪽 그래프 (b))
-
----
-
-## cf. Linux Process Context
-- 프로세스 문맥이란
-	- 운영체제가 프로세스를 관리하고 실행하는 데 필요한 모든 정보로,
-	- **시스템 문맥 · 하드웨어 문맥 · 메모리 문맥** 세 영역으로 구성된다.
-
-### 1. 시스템 문맥 (System Context)
-커널이 프로세스 관리를 위해 유지하는 자료구조들이다.
-**Task Structure**가 중심이 되어 다른 구조들을 포인터로 연결한다.
-
-- **Task Structure**: 프로세스 핵심 정보를 담고 다른 자료구조를 가리키는 중심 구조체
-- **File Table & fd**: 열린 파일 관리 (task structure → fd 배열 → file table 참조)
-- **Segment Table**: 메모리 세그먼트 정보, page table을 가리킴
-- **Page Table**: 가상 주소 → 물리 주소 변환 정보
-
-### 2. 하드웨어 문맥 (Hardware Context)
-CPU 레지스터 값을 저장하는 영역으로 **TSS(Task State Segment)**라 불린다.
-컨텍스트 스위칭 시 실행 상태를 보존·복원하며, Task Structure와 양방향으로 연결된다.
-
-- 주요 레지스터는
-	- `eip`(다음 명령어 주소), `sp`(스택 포인터), `eflags`(CPU 상태 플래그), `eax`(범용 레지스터), `cs`(코드 세그먼트)이다.
-
-### 3. 메모리 문맥 (Memory Context)
-- 프로세스가 실제 사용하는 메모리 공간이다.
-	- **Memory(주기억장치)**: page table로 매핑된 물리 메모리, 코드·데이터 적재
-	- **Disk(swap / a.out)**: 메모리에 없는 부분이 보관되는 곳, 필요 시 메모리로 적재
+## 4. 멀티코어와 멀티스레딩
+[[03-1_pthread 개요#6.1. 암달의 법칙 (Amdahl's Law)|암달의 법칙 (Amdahl's Law)]]

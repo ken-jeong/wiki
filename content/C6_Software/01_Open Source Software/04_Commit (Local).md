@@ -167,13 +167,6 @@ diff -u # unified context
 	- `--amend`: 가장 최근의 커밋을 수정한다. (메시지를 수정하거나, 빠진 파일을 추가하여 커밋 내용을 덮어쓴다.)
 	- `-v`(`--verbose`): 커밋 메시지 편집기를 열 때 변경 내용을 diff 형식으로 함께 보여준다.
 
-- 다른 예
-```sh
-GIT_AUTHOR_DATE="2025-05-28 12:00:00" GIT_COMMITTER_DATE="2025-05-28 12:00:00" git commit --allow-empty -m "Initial commit"
-
-GIT_AUTHOR_DATE="2025-05-30 12:00:00" GIT_COMMITTER_DATE="2025-05-30 12:00:00" git commit -m "docs: add README.md"
-```
-
 ### cf. Commit Convention Types
 - *Write a Good Commit Message*
 	- 협업을 위해 중요함

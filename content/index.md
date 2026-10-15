@@ -4,7 +4,7 @@ aliases:
 type: Index
 tags: []
 draft: false
-date: 2026-09-27
+date: 2026-10-15
 ---
 # Vault
 > **Computing**은 지식을 주제별로 분류하고, **PARA**는 자료를 활용 상태에 따라 분류한다.
@@ -17,9 +17,9 @@ date: 2026-09-27
 > - [[C3_Hardware/index|C3_Hardware]] — 하드웨어 기초, 논리회로, 컴퓨터구조
 > - [[C4_Systems/index|C4_Systems]] — 유닉스, 데이터베이스, 운영체제, 임베디드 시스템, 시스템 프로그래밍, 지식 시스템
 > - [[C5_Networks/index|C5_Networks]] — 네트워크 프로그래밍, 컴퓨터 네트워크, AWS·NAVER Cloud
-> - [[C6_Software/index|C6_Software]] — 프로그래밍 언어, 프론트엔드, 소프트웨어 공학, 웹 서비스
+> - [[C6_Software/index|C6_Software]] — Git·오픈소스, 프로그래밍 언어, 프론트엔드, 소프트웨어 공학, 웹 서비스
 > - [[C7_Methodologies/index|C7_Methodologies]] — 인공지능, PyTorch, 예측·인과추론·강화학습, LLM, MLOps
-> - [[C8_Applied/index|C8_Applied]] — 부트캠프, 현장 프로젝트, 응용설계, 보안
+> - **C8_Applied** — 부트캠프, 현장 프로젝트, 응용설계, AI 에이전트, 보안, FDE·커리어
 
 > [!note]- PARA
 > 자료의 활용 상태에 따른 분류

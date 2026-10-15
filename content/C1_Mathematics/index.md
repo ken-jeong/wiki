@@ -4,7 +4,7 @@ aliases:
 type: Index
 tags: []
 draft: false
-date: 2026-09-27
+date: 2026-10-15
 ---
 # C1_Mathematics
 > 컴퓨팅과 인공지능에 필요한 수학적 기반을 정리한다.
@@ -38,8 +38,8 @@ date: 2026-09-27
 > - [[C1_Mathematics/03_Linear Algebra/03_Determinant|03_Determinant]]
 > - [[C1_Mathematics/03_Linear Algebra/04_선형방정식의 해법과 응용|04_선형방정식의 해법과 응용]]
 > - [[C1_Mathematics/03_Linear Algebra/05_Vector|05_Vector]]
-> - [[C1_Mathematics/03_Linear Algebra/06A_선형사상|06A_선형사상]]
 > - [[C1_Mathematics/03_Linear Algebra/06_Vector Space|06_Vector Space]]
+> - [[C1_Mathematics/03_Linear Algebra/06A_선형사상|06A_선형사상]]
 > - [[C1_Mathematics/03_Linear Algebra/07-1_고유벡터와 고유값|07-1_고유벡터와 고유값]]
 > - [[C1_Mathematics/03_Linear Algebra/07-2_행렬의 대각화|07-2_행렬의 대각화]]
 > - [[C1_Mathematics/03_Linear Algebra/07-3_SVD & PCA|07-3_SVD & PCA]]
