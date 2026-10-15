@@ -132,7 +132,7 @@ axios.post("URL", {데이터객체})
 
 #### (1) 예제
 ```jsx
-axios.get("http://210.93.60.16:8080/frontend/task/score")
+axios.get("http://0.0.0.0:8080/frontend/task/score")
 ```
 
 ```jsx
@@ -149,7 +149,7 @@ const StudentList = () => {
 	}, []);
 	
 	const fetchStudents = () => {
-		axios.get('http://210.93.60.16:8080/frontend/RestController?cmd=list')
+		axios.get('http://0.0.0.0:8080/frontend/RestController?cmd=list')
 		.then((response) => {
 			setStudentList(response.data);
 		})

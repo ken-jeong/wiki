@@ -4,7 +4,7 @@ aliases:
 type: Index
 tags: []
 draft: false
-date: 2026-09-27
+date: 2026-10-15
 ---
 # C5_Networks
 > 네트워크 통신의 원리와 클라우드 환경에서의 활용을 정리한다.
@@ -36,14 +36,18 @@ date: 2026-09-27
 > - [[C5_Networks/02_Computer Networks/01-2_네트워크 에지와 코어|01-2_네트워크 에지와 코어]]
 > - [[C5_Networks/02_Computer Networks/01-3_패킷 교환과 프로토콜|01-3_패킷 교환과 프로토콜]]
 > - [[C5_Networks/02_Computer Networks/01-4_보안과 역사|01-4_보안과 역사]]
-> - [[C5_Networks/02_Computer Networks/02-1_애플리케이션 계층|02-1_애플리케이션 계층]]
+> - [[C5_Networks/02_Computer Networks/02-1_응용 계층|02-1_응용 계층]]
 > - [[C5_Networks/02_Computer Networks/02-2_HTTP|02-2_HTTP]]
-> - [[02-3_메일 프로토콜|02-3_메일 프로토콜]]
-> - [[02-5_P2P 파일 분배|02-5_애플리케이션 계층]]
-> - [[C5_Networks/02_Computer Networks/del|02-6_애플리케이션 계층]]
-> - [[03-1_트랜스포트 계층 개요와 UDP|03-1_트랜스포트 계층]]
-> - [[03-2_신뢰적 데이터 전송과 TCP|03-2_트랜스포트 계층]]
-> - [[03-3_혼잡 제어, TCP의 발전, QUIC 및 추가 자료|03-3_트랜스포트 계층]]
+> - [[C5_Networks/02_Computer Networks/02-3_메일 프로토콜|02-3_메일 프로토콜]]
+> - [[C5_Networks/02_Computer Networks/02-4_DNS|02-4_DNS]]
+> - [[C5_Networks/02_Computer Networks/02-5_P2P 파일 분배|02-5_P2P 파일 분배]]
+> - [[C5_Networks/02_Computer Networks/02-6_소켓 프로그래밍|02-6_소켓 프로그래밍]]
+> - [[C5_Networks/02_Computer Networks/03-1_전송 계층 개요|03-1_전송 계층 개요]]
+> - [[C5_Networks/02_Computer Networks/03-2_UDP|03-2_UDP]]
+> - [[C5_Networks/02_Computer Networks/03-3_RDT & ARQ|03-3_RDT & ARQ]]
+> - [[C5_Networks/02_Computer Networks/03-4_TCP|03-4_TCP]]
+> - [[C5_Networks/02_Computer Networks/03-5_혼잡 제어|03-5_혼잡 제어]]
+> - [[C5_Networks/02_Computer Networks/03-6_TCP의 발전, QUIC, 추가 자료|03-6_TCP의 발전, QUIC, 추가 자료]]
 > - [[C5_Networks/02_Computer Networks/09_네트워크 계층 - 데이터 평면 (1)|09_네트워크 계층 - 데이터 평면 (1)]]
 > - [[C5_Networks/02_Computer Networks/10_네트워크 계층 - 데이터 평면 (2)|10_네트워크 계층 - 데이터 평면 (2)]]
 > - [[C5_Networks/02_Computer Networks/11_네트워크 계층 - 제어 평면 (1)|11_네트워크 계층 - 제어 평면 (1)]]
@@ -53,12 +57,11 @@ date: 2026-09-27
 > 클라우드 컴퓨팅의 개념과 가상화 기술을 이해하고, AWS 위에서 IaaS·PaaS·SaaS를 단계적으로 실습한다.
 > - [[C5_Networks/03_Cloud Computing/01_클라우드 컴퓨팅 기초|01_클라우드 컴퓨팅 기초]]
 > - [[C5_Networks/03_Cloud Computing/02_AWS 기초|02_AWS 기초]]
-> - [[03_Compute Cloud (EC2)|03_Compute Cloud (EC2)]]
-> - [[04_Block Store (EBS)|04_Block Store (EBS)]]
-> - [[05_Load Balancing (ELB)|05_]]
-> - [[C5_Networks/03_Cloud Computing/06_네트워크 (1) - 기본사항 및 VPC|06_네트워크 (1) - 기본사항 및 VPC]]
-> - [[C5_Networks/03_Cloud Computing/07_네트워크 (2) - ELB|07_네트워크 (2) - ELB]]
-> - [[C5_Networks/03_Cloud Computing/08_AutoScale|08_AutoScale]]
+> - [[C5_Networks/03_Cloud Computing/03_Compute Cloud (EC2)|03_Compute Cloud (EC2)]]
+> - [[C5_Networks/03_Cloud Computing/04_Block Store (EBS)|04_Block Store (EBS)]]
+> - [[C5_Networks/03_Cloud Computing/05_Load Balancing (ELB)|05_Load Balancing (ELB)]]
+> - [[C5_Networks/03_Cloud Computing/06_Auto Scaling|06_Auto Scaling]]
+> - [[C5_Networks/03_Cloud Computing/07_기본사항 및 VPC|07_기본사항 및 VPC]]
 > - [[C5_Networks/03_Cloud Computing/09_데이터베이스 서비스 (1)|09_데이터베이스 서비스 (1)]]
 > - [[C5_Networks/03_Cloud Computing/10_데이터베이스 서비스 (2)|10_데이터베이스 서비스 (2)]]
 

@@ -4,7 +4,7 @@ aliases:
 type: Index
 tags: []
 draft: false
-date: 2026-09-27
+date: 2026-10-15
 ---
 # C3_Hardware
 > 컴퓨터를 구성하는 물리적 장치와 동작 원리를 정리한다.
@@ -42,5 +42,11 @@ date: 2026-09-27
 > - [[C3_Hardware/03_Computer Architecture/22_명령어|22_명령어]]
 > - [[C3_Hardware/03_Computer Architecture/31_컴퓨터 연산|31_컴퓨터 연산]]
 > - [[C3_Hardware/03_Computer Architecture/32_컴퓨터 연산|32_컴퓨터 연산]]
+> - [[C3_Hardware/03_Computer Architecture/41_프로세서|41_프로세서]]
+> - [[C3_Hardware/03_Computer Architecture/42_프로세서|42_프로세서]]
+> - [[C3_Hardware/03_Computer Architecture/51_메모리 계층구조|51_메모리 계층구조]]
+> - [[C3_Hardware/03_Computer Architecture/52_메모리 계층구조|52_메모리 계층구조]]
+> - [[C3_Hardware/03_Computer Architecture/61_병렬 프로세서|61_병렬 프로세서]]
+> - [[C3_Hardware/03_Computer Architecture/62_병렬 프로세서|62_병렬 프로세서]]
 
 ![RISC-V](https://img.shields.io/badge/RISC--V-283272?logo=riscv&logoColor=white)

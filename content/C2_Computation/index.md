@@ -4,7 +4,7 @@ aliases:
 type: Index
 tags: []
 draft: false
-date: 2026-09-27
+date: 2026-10-15
 ---
 # C2_Computation
 > 문제를 계산 가능한 형태로 표현하고 효율적으로 해결하기 위한 이론을 정리한다.
