@@ -207,7 +207,7 @@ void reverse(TNode* p) {
 ```
 
 #### (4) 노드의 레벨 구하기 (전위 순회)
-- 타겟(key)을 찾을 때까지 내려가며 level 값을 1씩 증가시킴
+- 타깃(key)을 찾을 때까지 내려가며 level 값을 1씩 증가시킴
 ```
 calc_level(n, key, level)
     if n = NULL : return 0

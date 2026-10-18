@@ -107,7 +107,7 @@ Bastion은 관리자가 서버에 들어가는 경유지, NAT Gateway는 서버�
 
 3. **Route Table 설정**
 	- Private Subnet의 Route Table 선택
-	- 목적지(Destination) `0.0.0.0/0` (모든 트래픽)의 타겟을 **NAT Gateway**로 설정
+	- 목적지(Destination) `0.0.0.0/0` (모든 트래픽)의 타깃을 **NAT Gateway**로 설정
 	- *이유: 사설망 서버가 외부 저장소(Repo)에서 패키지를 다운로드하기 위함*
 
 ## 4. 리소스 생성 (WEB & DB)

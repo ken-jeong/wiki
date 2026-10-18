@@ -45,7 +45,7 @@ make menuconfig
 
 다음 항목을 설정한다.
 - 공유 라이브러리 없이 실행하도록 정적 링크
-- 타겟용 컴파일러 접두어 지정
+- 타깃용 컴파일러 접두어 지정
 ```
 Settings -> Build Options
 [*] Build static binary (no shared libs)
@@ -85,7 +85,7 @@ mkdir -p ~/nfsroot/dev ~/nfsroot/proc ~/nfsroot/sys ~/nfsroot/etc/init.d
 <id>::<action>:<process>
 ```
 
-타겟 기준 파일 내용:
+타깃 기준 파일 내용:
 ```
 ~ # cat << 'EOF' > /etc/inittab
 ::sysinit:/etc/init.d/rcS
@@ -99,7 +99,7 @@ EOF
 |---|---|
 | `sysinit` | 시스템 초기화 과정에서 지정 프로그램 실행 |
 | `/etc/init.d/rcS` | proc·sysfs 등 기본 환경을 준비할 스크립트 |
-| `ttyAMA0` | 강의 타겟의 시리얼 콘솔 |
+| `ttyAMA0` | 강의 타깃의 시리얼 콘솔 |
 | `askfirst` | 사용자 입력을 기다린 뒤 셸 실행 |
 | `/bin/sh` | 실행할 셸 |
 
@@ -127,7 +127,7 @@ chmod a+x /etc/init.d/rcS
 chmod a+x ~/nfsroot/etc/init.d/rcS
 ```
 
-3. 재부팅 후 타겟에서 `mount`와 `ps`를 확인한다.
+3. 재부팅 후 타깃에서 `mount`와 `ps`를 확인한다.
 ```
 reboot
 mount
@@ -151,7 +151,7 @@ proc와 sysfs를 수동으로 마운트하던 작업을 rcS로 옮긴 셈이다.
 interpreter /lib/ld-musl-armhf.so.1
 ```
 
-타겟에 `hello`만 복사하고 이 파일을 준비하지 않으면 다음 오류가 발생한다.
+타깃에 `hello`만 복사하고 이 파일을 준비하지 않으면 다음 오류가 발생한다.
 ```text
 /bin/sh: ./hello: not found
 ```
@@ -161,8 +161,8 @@ interpreter /lib/ld-musl-armhf.so.1
 해결 과정:
 1. 호스트에서 `file hello`로 실행 파일 형식과 인터프리터 경로를 확인한다.
 2. 사용한 툴체인의 sysroot에서 해당 로더를 찾는다.
-3. 타겟 rootfs의 동일한 경로인 `/lib/ld-musl-armhf.so.1`에 배치한다.
-4. 타겟에서 다시 실행한다.
+3. 타깃 rootfs의 동일한 경로인 `/lib/ld-musl-armhf.so.1`에 배치한다.
+4. 타깃에서 다시 실행한다.
 
 강의는 musl에서 동적 로더에 C 라이브러리 기능이 포함된다는 점을 설명한다. 다른 라이브러리 구성에서도 로더 하나만 복사하면 된다고 일반화하지 않는다.
 
@@ -182,7 +182,7 @@ rootfs 전체를 비교할 때는 추가된 로더와 공유 라이브러리도 
 > 2026-10-15
 
 ## 4. 웹 서비스 추가하기
-1. 강의에서 제공하는 `data/www` 내용을 타겟의 `/www`에 배치한다.
+1. 강의에서 제공하는 `data/www` 내용을 타깃의 `/www`에 배치한다.
 ```sh
 ~ ❯ scp ~/Downloads/www.zip user@192.168.64.2:~/
 ```
@@ -191,7 +191,7 @@ rootfs 전체를 비교할 때는 추가된 로더와 공유 라이브러리도 
 user@ubuntu:~$ sudo unzip ~/www.zip -d ~/nfsroot
 ```
 
-2. 타겟에서 BusyBox HTTP 서버를 실행한다.
+2. 타깃에서 BusyBox HTTP 서버를 실행한다.
 ```sh
 /usr/sbin/httpd -h /www/
 ```
@@ -242,7 +242,7 @@ cd ~/nfsroot
 ln -s /sbin/init init
 ```
 이 명령은 `/init`이 없는 상태를 전제로 한다.
-완성된 타겟 파일 계층에서 `/init`이 `/sbin/init`을 가리키도록 만든다.
+완성된 타깃 파일 계층에서 `/init`이 `/sbin/init`을 가리키도록 만든다.
 
 **아카이브를 만든 뒤 원본 디렉터리에 `/init`을 추가하면 기존 아카이브에는 반영되지 않는다. 다시 패키징해야 한다.**
 
@@ -288,5 +288,5 @@ bootz <kernel-addr> <initramfs-addr> <dtb-addr>
 | DTB       | `0x62000000` |
 | initramfs | `0x63000000` |
 
-주소는 해당 실습 보드의 예이며, 다른 타겟에 그대로 적용하는 값은 아니다.
+주소는 해당 실습 보드의 예이며, 다른 타깃에 그대로 적용하는 값은 아니다.
 강의 15쪽의 압축 CPIO 직접 전달 예제와 6쪽의 컨테이너 방식은 구분해서 읽어야 한다.

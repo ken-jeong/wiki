@@ -73,12 +73,11 @@ date: 2026-10-15
 > [!note]- Business Management
 > ESG 경영을 실천하는 기업을 중심으로 조직과 환경을 이해하고 계획·조직화·지휘·통제로 이어지는 기업활동을 탐구한다.
 > - [[C0_Liberal Arts/06_Business Management/01-1_경영|01-1_경영]]
-> - [[C0_Liberal Arts/06_Business Management/01-2_경영자, 기업, 경영 마인드|01-2_경영자, 기업, 경영 마인드]]
+> - [[01-2_경영자|01-2_경영자]]
 > - [[C0_Liberal Arts/06_Business Management/02_경영마인드|02_경영마인드]]
-> - [[C0_Liberal Arts/06_Business Management/03-1_경영학|03-1_경영학]]
-> - [[C0_Liberal Arts/06_Business Management/03-2_경영학의 역사|03-2_경영학의 역사]]
-> - [[C0_Liberal Arts/06_Business Management/04_기업의 창업과 벤처창업|04_기업의 창업과 벤처창업]]
-> - [[C0_Liberal Arts/06_Business Management/05_경영활동의 순환과 계획활동|05_경영활동의 순환과 계획활동]]
+> - [[03_경영학|03_경영학]]
+> - [[04_창업|04_창업]]
+> - [[05_계획활동|05_계획활동]]
 > - [[C0_Liberal Arts/06_Business Management/06_계획활동|06_계획활동]]
 > - [[C0_Liberal Arts/06_Business Management/07_조직화 활동|07_조직화 활동]]
 > - [[C0_Liberal Arts/06_Business Management/08_지휘활동 - 리더십, 동기부여, 의사소통|08_지휘활동 - 리더십, 동기부여, 의사소통]]

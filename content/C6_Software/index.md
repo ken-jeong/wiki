@@ -63,7 +63,7 @@ date: 2026-10-15
 > - [[C6_Software/04_Web Service Programming/08_MVC 패턴의 이해|08_MVC 패턴의 이해]]
 > - [[C6_Software/04_Web Service Programming/09-1_DB|09-1_DB]]
 > - [[C6_Software/04_Web Service Programming/09-2_JDBC|09-2_JDBC]]
-> - [[C6_Software/04_Web Service Programming/09-A_MySQL|09-A_MySQL]]
+> - [[09-3_MySQL|09-3_MySQL]]
 > - [[C6_Software/04_Web Service Programming/10_뉴스 기사 관리 웹 서비스|10_뉴스 기사 관리 웹 서비스]]
 > - [[C6_Software/04_Web Service Programming/11_리스너와 필터|11_리스너와 필터]]
 > - [[C6_Software/04_Web Service Programming/12_REST API 개발|12_REST API 개발]]

@@ -253,7 +253,7 @@ intent.setPackage("com.google.android.apps.maps")
 startActivity(intent)
 ```
 
-## 2. 액티비티 생명주기
+## 2. 액티비티 생명 주기
 ### 2.1. 액티비티의 3가지 상태
 
 |     상태      |                                 설명                                 |
@@ -262,7 +262,7 @@ startActivity(intent)
 |  **일시 정지**  | 화면 출력 중 + 사용자 이벤트 처리 **불가**<br>포커스 및 상호작용 X (예: 투명한 액티비티가 위에 뜬 경우) |
 | **비활성(중지)** |                     화면에 **출력되지 않는** 상태 (종료 X)                      |
 
-### 2.2. 생명주기 콜백 메서드
+### 2.2. 생명 주기 콜백 메서드
 ![[Activity_Lifecycle.png]]
 ```mermaid
 stateDiagram-v2

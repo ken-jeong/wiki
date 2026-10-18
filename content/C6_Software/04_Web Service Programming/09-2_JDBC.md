@@ -33,7 +33,7 @@ date: 2026-10-09
 
 ## 2. H2 데이터베이스
 ### 2.1. 특징
-- 경량 RDBMS로 용량과 메모리 사용량이 작다.
+- **경량 RDBMS**로 용량과 메모리 사용량이 작다.
 - 표준 SQL을 지원하며 JDBC·JPA와 연계하기 쉽다.
 - 특정 DB에 종속된 기능을 쓰지 않는 관계형 DB 개발에 활용할 수 있다.
 
@@ -90,37 +90,55 @@ jdbc:하위프로토콜:데이터원본식별자
 > [H2 자료형 공식 문서](https://www.h2database.com/html/datatypes.html#date_type)
 
 ## 3. JDBC
-### 3.1. JDBC의 개념
-**JDBC(Java Database Connectivity)**
-- **자바 프로그램**이 표준화된 방법으로
-- **데이터베이스**에 **접근**하도록 제공하는 API
+**JDBC** (Java Database Connectivity)
+- 자바 애플리케이션이 다양한 RDBMS에 접근할 수 있도록 해주는 자바 표준 규격
 
-### 3.2. JDBC의 구조
+### 3.1. JDBC 구조
+1. **자바 애플리케이션**
+	- JDBC API의 인터페이스를 통해 DB와 통신한다.
+2. **JDBC API**
+	- 표준 명세를 제공한다.
+	- (Connection, Statement, PreparedStatement, ResultSet 등)
+3. **JDBC DriverManager**
+	- 등록된 드라이버 목록을 관리하고, 요청된 DB 접속 URL에 적합한 드라이버를 찾아 커넥션을 생성해 준다.
+4. **JDBC 드라이버**
+	- JDBC 인터페이스를 각 DB 벤더사에서 자체 프로토콜에 맞게 직접 구현한 라이브러리이다.
+5. **DBMS**
+	- 실제 데이터가 저장되고 SQL 쿼리를 처리하는 물리적 서버이다.
+
 ```mermaid
 flowchart TD
-    app["자바 애플리케이션 코드"] --> api["JDBC API"]
-    api --> oracleDriver["Oracle JDBC 드라이버"]
-    api --> mysqlDriver["MySQL JDBC 드라이버"]
-    api --> h2Driver["H2 JDBC 드라이버"]
-    oracleDriver --> oracleDb[("Oracle DB")]
-    mysqlDriver --> mysqlDb[("MySQL DB")]
-    h2Driver --> h2Db[("H2 DB")]
+    App[자바 애플리케이션]
+    
+    subgraph JDBC_API [JDBC API]
+        API[표준 인터페이스]
+    end
+
+    DM[JDBC DriverManager]
+
+    subgraph JDBC_Drivers [JDBC 드라이버 계층]
+        D1[MySQL 드라이버]
+        D2[Oracle 드라이버]
+        D3[PostgreSQL 드라이버]
+    end
+
+    subgraph Databases [데이터베이스]
+        DB1[(MySQL)]
+        DB2[(Oracle)]
+        DB3[(PostgreSQL)]
+    end
+
+    App --> API
+    API --> DM
+    DM --> D1
+    DM --> D2
+    DM --> D3
+    D1 <--> DB1
+    D2 <--> DB2
+    D3 <--> DB3
 ```
 
-DB마다 연결·처리 방식이 다르므로,
-프로그램은 공통 JDBC API를 사용하고
-실제 DB와의 통신은 각 DB의 드라이버가 담당한다.
-
-| 구성 요소         | 역할                       |
-| ------------- | ------------------------ |
-| 자바 애플리케이션     | JDBC API를 호출하여 DB 작업 요청  |
-| **JDBC API**  | DB 접근을 위한 공통 규격 제공       |
-| **JDBC 드라이버** | DB별로 API를 구현하고 실제 DB와 통신 |
-| DBMS          | SQL을 실행하고 데이터 저장·조회      |
-
-*cf. API가 같아도 DB별 SQL 문법이나 기능 차이는 남을 수 있다.*
-
-### 3.3. JDBC 드라이버 설치
+### 3.2. JDBC 드라이버 설치
 설치 방법
 - **Maven 사용**: `pom.xml`에 의존성을 추가한다.
 ```xml
@@ -138,7 +156,7 @@ DB마다 연결·처리 방식이 다르므로,
 
 - 저장 후 라이브러리가 다운로드된다.
 
-## 4. JDBC 프로그래밍 과정
+## 4. JDBC 프로그래밍
 웹 프로그램과 일반 자바 프로그램에서 공통으로 적용된다.
 
 | 단계  | 수행 내용               | 주요 API                                        |

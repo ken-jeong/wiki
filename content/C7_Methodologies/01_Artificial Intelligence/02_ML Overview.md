@@ -98,7 +98,7 @@ graph TD
 | **독립변수** (Independent variable) | **종속변수** (Dependent variable) |
 | **예측변수** (Explanatory variable) | **반응변수** (Response variable)  |
 |    **인풋변수** (Input variable)    |  **아웃풋변수** (Output variable)  |
-|                -                |  **타겟변수** (Target variable)   |
+|                -                |  **타깃변수** (Target variable)   |
 
 #### 문제 유형
 1. ==회귀 (Regression)==

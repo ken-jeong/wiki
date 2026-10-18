@@ -53,20 +53,16 @@ date: 2026-10-15
 > [!note]- Embedded Systems
 > 임베디드 리눅스 개발환경, 부트로더·커널·루트 파일시스템, 디바이스 드라이버와 응용 개발
 > - [[C4_Systems/04_Embedded Systems/01_임베디드 리눅스|01_임베디드 리눅스]]
-> - [[C4_Systems/04_Embedded Systems/02-1_개발 환경|02-1_개발 환경]]
-> - [[C4_Systems/04_Embedded Systems/02-2_툴체인 구축|02-2_툴체인 구축]]
-> - [[C4_Systems/04_Embedded Systems/02-3_설치 결과|02-3_설치 결과]]
-> - [[C4_Systems/04_Embedded Systems/03-1_부트로더 개념|03-1_부트로더 개념]]
-> - [[C4_Systems/04_Embedded Systems/03-2_부트로더 종류|03-2_부트로더 종류]]
-> - [[C4_Systems/04_Embedded Systems/03-3_부트로더 실습|03-3_부트로더 실습]]
-> - [[C4_Systems/04_Embedded Systems/03-4_RaspberryPi U-Boot 실습|03-4_RaspberryPi U-Boot 실습]]
+> - [[02_개발 환경|02_개발 환경]]
+> - [[03-1_부트로더|03_부트로더]]
+> - [[03-2_RaspberryPi 실습|03-2_RaspberryPi U-Boot 실습]]
 > - [[C4_Systems/04_Embedded Systems/04_리눅스 커널|04_리눅스 커널]]
 > - [[C4_Systems/04_Embedded Systems/05-1_루트 파일 시스템|05-1_루트 파일 시스템]]
 > - [[C4_Systems/04_Embedded Systems/05-2_BusyBox|05-2_BusyBox]]
 > - [[C4_Systems/04_Embedded Systems/06_하드웨어 장치|06_하드웨어 장치]]
 > - [[C4_Systems/04_Embedded Systems/07_라이브러리와 응용|07_라이브러리와 응용]]
 > - [[C4_Systems/04_Embedded Systems/08_리눅스 빌드시스템|08_리눅스 빌드시스템]]
-> - [[C4_Systems/04_Embedded Systems/09_타겟 보드 응용|09_타겟 보드 응용]]
+> - [[09_타깃 보드 응용|09_타깃 보드 응용]]
 > - [[C4_Systems/04_Embedded Systems/10_Python 응용 개발|10_Python 응용 개발]]
 > - [[C4_Systems/04_Embedded Systems/11_Qt 응용 개발|11_Qt 응용 개발]]
 
@@ -74,12 +70,12 @@ date: 2026-10-15
 
 > [!note]- System Programming
 > 프로세스와 POSIX 스레드, 파일 입출력, 시그널과 IPC, 병렬 프로그래밍
-> - [[C4_Systems/05_System Programming/01-1_프로세스 개요|01-1_프로세스 개요]]
-> - [[C4_Systems/05_System Programming/01-2_프로세스 제어 시스템 콜|01-2_프로세스 제어 시스템 콜]]
+> - [[01-1_프로세스 문맥|01-1_프로세스]]
+> - [[01-2_프로세스 시스템 콜|01-2_프로세스 시스템 콜]]
 > - [[C4_Systems/05_System Programming/01-3_셸|01-3_셸]]
-> - [[C4_Systems/05_System Programming/01-4_프로세스 그룹|01-4_프로세스 그룹]]
+> - [[01-4_터미널|01-4_터미널]]
 > - [[C4_Systems/05_System Programming/02_스레드|02_스레드]]
-> - [[C4_Systems/05_System Programming/03-1_pthread 개요|03-1_pthread 개요]]
+> - [[03-1_pthread|03-1_pthread]]
 > - [[C4_Systems/05_System Programming/03-2_pthread 동기화|03-2_pthread 동기화]]
 > - [[C4_Systems/05_System Programming/04_시간 관리|04_시간 관리]]
 > - [[C4_Systems/05_System Programming/05_pipe IPC|05_pipe IPC]]
