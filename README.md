@@ -2,7 +2,7 @@
 
 개인 학습 기록과 기술 노트를 정리하는 Quartz 4 기반 디지털 가든입니다.
 
-[사이트 방문](https://ken-jeong.pages.dev/)
+[사이트 방문](https://ken-jeong.github.io/wiki/)
 
 ![노트 그래프 뷰](assets/graph-view.png)
 
@@ -39,7 +39,13 @@ npx quartz build --serve
 - `quartz.layout.ts`: 화면 레이아웃
 - `quartz/styles/custom.scss`: 사용자 정의 스타일
 
-배포 전 `quartz.config.ts`의 `baseUrl`을 실제 사이트 주소에 맞춰 설정하세요.
+## 배포
+
+`v4` 브랜치에 push하면 GitHub Actions가 사이트를 빌드하고 GitHub Pages에 배포합니다.
+Actions 탭에서 `Deploy to GitHub Pages`를 수동 실행할 수도 있습니다.
+
+저장소 Settings → Pages의 Source는 `GitHub Actions`로 설정합니다.
+`quartz.config.ts`의 `baseUrl`은 `ken-jeong.github.io/wiki`입니다.
 
 ## 라이선스
 
