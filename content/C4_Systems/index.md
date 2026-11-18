@@ -5,7 +5,7 @@ type:
   - Index
 tags: []
 draft: false
-date: 2026-11-13
+date: 2026-11-18
 prev:
 next:
 ---
@@ -63,10 +63,10 @@ next:
 > - [[C4_Systems/04_Embedded Systems/05-1_루트 파일 시스템|05-1_루트 파일 시스템]]
 > - [[C4_Systems/04_Embedded Systems/05-2_BusyBox|05-2_BusyBox]]
 > - [[C4_Systems/04_Embedded Systems/06-1_하드웨어 장치|06-1_하드웨어 장치]]
-> - [[C4_Systems/04_Embedded Systems/06-2_하드웨어 장치|06-2_하드웨어 장치]]
-> - [[C4_Systems/04_Embedded Systems/07_라이브러리와 응용|07_라이브러리와 응용]]
-> - [[C4_Systems/04_Embedded Systems/08_리눅스 빌드 시스템|08_리눅스 빌드 시스템]]
-> - [[C4_Systems/04_Embedded Systems/09_타깃 보드 응용|09_타깃 보드 응용]]
+> - [[06-2_블록 장치, 파일 시스템, 플래시 저장소|06-2_블록 장치, 파일 시스템, 플래시 저장소]]
+> - [[C4_Systems/04_Embedded Systems/07_사용자 공간 라이브러리와 응용|07_사용자 공간 라이브러리와 응용]]
+> - [[C4_Systems/04_Embedded Systems/08_임베디드 리눅스 빌드 시스템|08_임베디드 리눅스 빌드 시스템]]
+> - [[C4_Systems/04_Embedded Systems/09_타겟 보드 응용|09_타겟 보드 응용]]
 > - [[C4_Systems/04_Embedded Systems/10_Python 응용 개발|10_Python 응용 개발]]
 > - [[C4_Systems/04_Embedded Systems/11_Qt 응용 개발|11_Qt 응용 개발]]
 
@@ -83,24 +83,11 @@ next:
 > - [[C4_Systems/05_System Programming/03-2_pthread 동기화|03-2_pthread 동기화]]
 > - [[C4_Systems/05_System Programming/04_시간 관리|04_시간 관리]]
 > - [[C4_Systems/05_System Programming/05_파이프 IPC|05_파이프 IPC]]
-> - [[C4_Systems/05_System Programming/06_고급 IPC|06_고급 IPC]]
-> - [[C4_Systems/05_System Programming/07-1_시그널의 개념과 기본 동작|07-1_시그널의 개념과 기본 동작]]
-> - [[C4_Systems/05_System Programming/07-2_시그널 처리와 제어|07-2_시그널 처리와 제어]]
-> - [[C4_Systems/05_System Programming/08_File|08_File]]
-> - [[C4_Systems/05_System Programming/09_문맥상의 File, Directory, Device File|09_문맥상의 File, Directory, Device File]]
-> - [[C4_Systems/05_System Programming/10_IO Models|10_IO Models]]
-> - [[C4_Systems/05_System Programming/11_Linker & Loader|11_Linker & Loader]]
+> - [[C4_Systems/05_System Programming/06_시스템 V IPC|06_시스템 V IPC]]
+> - [[C4_Systems/05_System Programming/07_시그널 IPC|07_시그널 IPC]]
+> - [[C4_Systems/05_System Programming/08_파일, 파일 시스템, 파일 입출력|08_파일, 파일 시스템, 파일 입출력]]
+> - [[C4_Systems/05_System Programming/09_문맥상의 파일, 디렉터리, 디바이스 파일|09_문맥상의 파일, 디렉터리, 디바이스 파일]]
+> - [[C4_Systems/05_System Programming/10_IO 모델|10_IO 모델]]
+> - [[C4_Systems/05_System Programming/11_링커와 로더|11_링커와 로더]]
 
 ![C](https://img.shields.io/badge/C-00599C?logo=c&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black) ![POSIX](https://img.shields.io/badge/POSIX-1D1D1D?logo=linuxfoundation&logoColor=white)
-
-> [!note]- Knowledge Systems
-> **Knowledge Graphs (Archive)**
-> - [[X3_Open Lectures/Knowledge Graphs/01_지식 그래프란 무엇인가|01_지식 그래프란 무엇인가]]
-> - [[X3_Open Lectures/Knowledge Graphs/02_지식 그래프 데이터 모델|02_지식 그래프 데이터 모델]]
-> - [[X3_Open Lectures/Knowledge Graphs/03_지식 그래프를 어떻게 만드는가 (스키마 설계)|03_지식 그래프를 어떻게 만드는가 (스키마 설계)]]
-> - [[X3_Open Lectures/Knowledge Graphs/04_구조화 데이터로부터 지식 그래프 만들기|04_구조화 데이터로부터 지식 그래프 만들기]]
-> - [[X3_Open Lectures/Knowledge Graphs/05_텍스트로부터 지식 그래프 만들기|05_텍스트로부터 지식 그래프 만들기]]
-> - [[X3_Open Lectures/Knowledge Graphs/06_지식 그래프 추론 알고리즘|06_지식 그래프 추론 알고리즘]]
-> - [[X3_Open Lectures/Knowledge Graphs/07_사용자는 지식 그래프와 어떻게 상호작용하는가|07_사용자는 지식 그래프와 어떻게 상호작용하는가]]
-> - [[X3_Open Lectures/Knowledge Graphs/08_지식 그래프를 어떻게 진화시키는가|08_지식 그래프를 어떻게 진화시키는가]]
-> - [[X3_Open Lectures/Knowledge Graphs/10_지식 그래프와 AI의 관계|10_지식 그래프와 AI의 관계]]

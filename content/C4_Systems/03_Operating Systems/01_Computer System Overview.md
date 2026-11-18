@@ -183,7 +183,7 @@ flowchart TB
     class R,C focus
 ```
 
- - *cf.*
+- *cf.*
 	- 보드 내 메모리: 레지스터 / 캐시 / 주기억장치
 	- 보드 외 메모리: 자기 디스크, CD, DVD
 	- 오프라인 저장장치: 자기 테이프, MO, WORM

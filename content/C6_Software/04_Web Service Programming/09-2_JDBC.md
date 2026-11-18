@@ -94,7 +94,7 @@ flowchart LR
 
 ### 2.3. 모드별 JDBC URL
 일반 구조:
-```text
+```
 jdbc:하위프로토콜:데이터원본식별자
 ```
 

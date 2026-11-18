@@ -5,7 +5,7 @@ type:
   - Index
 tags: []
 draft: false
-date: 2026-11-13
+date: 2026-11-18
 prev:
 next:
 ---
@@ -45,24 +45,26 @@ next:
 > - [[C5_Networks/02_Computer Networks/03-1_전송 계층 서비스, 다중화|03-1_전송 계층 서비스, 다중화]]
 > - [[C5_Networks/02_Computer Networks/03-2_UDP|03-2_UDP]]
 > - [[C5_Networks/02_Computer Networks/03-3_오류 제어|03-3_오류 제어]]
-> - [[C5_Networks/02_Computer Networks/03-4_흐름 제어|03-4_흐름 제어]]
+> - [[03-4_TCP 및 흐름 제어|03-4_흐름 제어]]
 > - [[C5_Networks/02_Computer Networks/03-5_혼잡 제어|03-5_혼잡 제어]]
 > - [[C5_Networks/02_Computer Networks/04-1_네트워크 계층, 라우터 구조|04-1_네트워크 계층, 라우터 구조]]
 > - [[C5_Networks/02_Computer Networks/04-2_인터넷 프로토콜|04-2_인터넷 프로토콜]]
-> - [[C5_Networks/02_Computer Networks/04-3_포워딩, SDN, 미들박스|04-3_포워딩, SDN, 미들박스]]
+> - [[04-3_데이터 평면|04-3_데이터 평면]]
 
 > [!note]- Cloud Computing
 > 클라우드 컴퓨팅의 개념과 가상화 기술을 이해하고, AWS 위에서 IaaS·PaaS·SaaS를 단계적으로 실습한다.
 > - [[C5_Networks/03_Cloud Computing/01_클라우드 컴퓨팅 기초|01_클라우드 컴퓨팅 기초]]
 > - [[C5_Networks/03_Cloud Computing/02_AWS 기초|02_AWS 기초]]
-> - [[C5_Networks/03_Cloud Computing/03_EC2 (Elastic Compute Cloud)|03_EC2 (Elastic Compute Cloud)]]
-> - [[C5_Networks/03_Cloud Computing/04_EBS (Elastic Block Store)|04_EBS (Elastic Block Store)]]
-> - [[C5_Networks/03_Cloud Computing/05_ELB (Elastic Load Balancing)|05_ELB (Elastic Load Balancing)]]
-> - [[C5_Networks/03_Cloud Computing/06_Auto Scaling|06_Auto Scaling]]
-> - [[C5_Networks/03_Cloud Computing/07_RDS (Relational Database Service)|07_RDS (Relational Database Service)]]
-> - [[C5_Networks/03_Cloud Computing/08_S3 (Simple Storage Service)|08_S3 (Simple Storage Service)]]
-> - [[C5_Networks/03_Cloud Computing/09_CloudFront CDN|09_CloudFront CDN]]
-> - [[C5_Networks/03_Cloud Computing/10_Route 53|10_Route 53]]
+> - [[03_가상 서버 (EC2)|03_가상 서버 (AWS EC2)]]
+> - [[04_블록 스토리지 (EBS)|04_블록 스토리지 (EBS)]]
+> - [[05_로드 밸런서 (ELB)|05_로드 밸런서 (ELB)]]
+> - [[06_오토 스케일링|06_오토 스케일링]]
+> - [[07_관리형 RDB (RDS)|07_관리형 RDB (RDS)]]
+> - [[08_객체 스토리지 (S3)|08_객체 스토리지 (S3)]]
+> - [[09_CDN (CloudFront)|09_CDN (CloudFront)]]
+> - [[10_DNS (Route 53)|10_DNS (Route 53)]]
+> - [[11_계정 및 권한 관리 (IAM)]]
+> - [[12_모니터링 (CloudWatch)]]
 
 ![AWS](https://img.shields.io/badge/AWS-232F3E?logo=amazonwebservices&logoColor=white)
 

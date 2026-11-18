@@ -64,7 +64,7 @@ typedef struct TNode {
 | BFS | Level-order |  -  | 너비 우선 탐색, 큐를 사용하여 구현     | 최단 경로 탐색, 넓이 기반 탐색  |
 
 #### (1) 전위 순회 (Preorder; VLR)
-- 루트 노드 $\rightarrow$ 왼쪽 서브트리 $\rightarrow$ 오른쪽 서브트리
+- 루트 노드 → 왼쪽 서브트리 → 오른쪽 서브트리
 ![|400](https://imgur.com/tqoB8Ce.png)
 ```
 preorder(n)
@@ -84,7 +84,7 @@ void preorder(TNode* n) {
 ```
 
 #### (2) 중위 순회 (Inorder; LVR)
-- 왼쪽 서브트리 $\rightarrow$ 루트 노드 $\rightarrow$ 오른쪽 서브트리
+- 왼쪽 서브트리 → 루트 노드 → 오른쪽 서브트리
 - ==(결과가 오름차순으로 정렬됨)==
 - $T(n) = T(k) + T(n-k-1) + d;\quad T(0)=c$
 ![|400](https://imgur.com/2s0Wowm.png)
@@ -106,7 +106,7 @@ void inorder(TNode* n) {
 ```
 
 #### (3) 후위 순회 (Postorder; LRV)
-- 왼쪽 서브트리 $\rightarrow$ 오른쪽 서브트리 $\rightarrow$ 루트 노드
+- 왼쪽 서브트리 → 오른쪽 서브트리 → 루트 노드
 ![|400](https://imgur.com/YqCYNMn.png)
 ```
 postorder(n)
@@ -251,8 +251,8 @@ int calc_level(TNode* n, TNode* key, int level) {
 
 ### 3.2. 힙의 연산
 - 완전 이진 트리의 구조를 지키기 위한 연산
-    - **삽입**(up-heap): 마지막 노드에 추가 후 위로 조정
-    - **삭제**(down-heap): 루트 제거 후 마지막 노드를 루트로 이동, 아래로 조정
+	- **삽입**(up-heap): 마지막 노드에 추가 후 위로 조정
+	- **삭제**(down-heap): 루트 제거 후 마지막 노드를 루트로 이동, 아래로 조정
 
 #### (1) 힙의 삽입 연산 (Up-heap)
 - 마지막 노드 위치에 삽입 → 부모와 비교하며 위로 이동
@@ -331,8 +331,8 @@ insert(root, n)
 	- 해당 노드를 삭제하고 부모 노드의 링크를 자식 노드로 변경
 - Case 3: **자식 2개** 노드의 삭제
 	- **후계자 노드**를 이용
-	    - 왼쪽 서브 트리에서 가장 큰 노드, 또는
-	    - 오른쪽 서브 트리에서 가장 작은 노드
+		- 왼쪽 서브 트리에서 가장 큰 노드, 또는
+		- 오른쪽 서브 트리에서 가장 작은 노드
 	- 후계자의 데이터를 삭제할 노드에 복사하고, 실제로는 후계자 노드를 삭제
 
 ```

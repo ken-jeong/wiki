@@ -79,7 +79,7 @@ pthread_join(worker, NULL);
 > 공유 데이터에 록 걸기
 
 ### 3.1. 동작 흐름
-```text
+```
 초기화 → lock → 임계 구역 수행 → unlock → 사용 종료 후 destroy
 ```
 
@@ -195,7 +195,7 @@ pthread_cond_destroy(&cond);  // 사용 종료 후, 대기자가 없는 상태�
 > [POSIX 조건 대기 명세](https://man7.org/linux/man-pages/man3/pthread_cond_wait.3p.html)
 
 ### 4.4. `pthread_cond_wait()`의 핵심 흐름
-```text
+```
 호출 전: 호출 스레드가 Mutex 소유
     ↓
 Mutex 해제와 조건 변수 대기를 원자적으로 수행

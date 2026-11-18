@@ -116,8 +116,8 @@ export default App;
 
 ## 2. AXIOS
 - **AXIOS**: Promise 기반의 HTTP 비동기 통신 라이브러리
-    - 응답 데이터를 자동으로 JSON 객체로 파싱한다.
-    - `npm install axios`로 설치한다.
+	- 응답 데이터를 자동으로 JSON 객체로 파싱한다.
+	- `npm install axios`로 설치한다.
 
 ### 2.1. 사용 문법
 - **GET 요청 (데이터 조회)**

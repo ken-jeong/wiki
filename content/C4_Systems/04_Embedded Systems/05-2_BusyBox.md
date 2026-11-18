@@ -16,7 +16,7 @@ next:
 **BusyBox**
 - 여러 UNIX 명령을 **하나의 실행 파일**로 묶는다.
 - 각 명령 기능을 applet이라고 하며, 명령 이름의 심볼릭 링크를 통해 같은 BusyBox 실행 파일을 호출할 수 있다.
-```text
+```
 /bin/ls    -> /bin/busybox
 /bin/cp    -> /bin/busybox
 /bin/sh    -> /bin/busybox
@@ -86,7 +86,7 @@ mkdir -p ~/nfsroot/dev ~/nfsroot/proc ~/nfsroot/sys ~/nfsroot/etc/init.d
 
 ### 2.1. `/etc/inittab`
 강의에서 사용하는 줄 형식:
-```text
+```
 <id>::<action>:<process>
 ```
 
@@ -152,12 +152,12 @@ proc와 sysfs를 수동으로 마운트하던 작업을 rcS로 옮긴 셈이다.
 
 ### 3.2. 파일이 있는데 왜 `not found`인가?
 강의의 `hello`는 다음 인터프리터를 요구한다.
-```text
+```
 interpreter /lib/ld-musl-armhf.so.1
 ```
 
 타깃에 `hello`만 복사하고 이 파일을 준비하지 않으면 다음 오류가 발생한다.
-```text
+```
 /bin/sh: ./hello: not found
 ```
 
@@ -281,7 +281,7 @@ mkimage \
 - 출력: U-Boot용 헤더로 감싼 `uInitramfs`
 
 - `bootz`의 인자 순서: **커널 주소 → initramfs 주소 → DTB 주소**.
-```text
+```
 bootz <kernel-addr> <initramfs-addr> <dtb-addr>
 ```
 

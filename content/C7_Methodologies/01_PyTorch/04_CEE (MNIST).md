@@ -68,7 +68,7 @@ next:
 
 - Sigmoid 양 끝단에서 gradient가 0에 수렴
 - 깊은 신경망의 input layer 쪽으로 갈수록 gradient 소실
-    - 예: (0.3)¹⁰ = 0.000006
+	- 예: (0.3)¹⁰ = 0.000006
 - Sigmoid의 최대 gradient = 0.3
 - **해결책**: ReLU 또는 PReLU 사용 (양의 구간에서 gradient = 1 유지)
 

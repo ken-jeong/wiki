@@ -198,9 +198,9 @@ startActivity(intent)
 	- 인텐트 필터를 작성하면 해당 컴포넌트의 클래스명과 인텐트 필터 정보가 안드로이드 시스템에 등록됨
 
 - 구성 태그
-    - `<action>`: 컴포넌트의 **기능** 정보 (예: `ACTION_VIEW`, `ACTION_EDIT`)
-    - `<category>`: 컴포넌트가 포함되는 **범주** 정보 (예: `LAUNCHER`, `BROWSABLE`)
-    - `<data>`: 컴포넌트에 필요한 **데이터** 정보 (`scheme`, `host`, `port`, `mimeType` 등)
+	- `<action>`: 컴포넌트의 **기능** 정보 (예: `ACTION_VIEW`, `ACTION_EDIT`)
+	- `<category>`: 컴포넌트가 포함되는 **범주** 정보 (예: `LAUNCHER`, `BROWSABLE`)
+	- `<data>`: 컴포넌트에 필요한 **데이터** 정보 (`scheme`, `host`, `port`, `mimeType` 등)
 
 ```xml
 <!-- 암시적 인텐트 설정 예시 -->
@@ -250,7 +250,7 @@ try {
 - **특정 앱 지정 실행**
 	- `setPackage()` 로 패키지명 지정
 	- 앱 패키지명 확인: 구글 플레이 스토어 URL의 `id=패키지명` 참고
-    - 예: 카카오톡 → `com.kakao.talk`
+	- 예: 카카오톡 → `com.kakao.talk`
 
 ```kotlin
 val intent = Intent(Intent.ACTION_VIEW, Uri.parse("geo:37.7749,127.4194"))

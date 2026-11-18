@@ -54,8 +54,8 @@ next:
 	- **귀류 가정에 의해 j는 홀수** ($j=2k+1$)
 
 - **Step 3. 모순 도출**
-	 - 그런데 악수 정리에 의해: $\sum_{v \in V}\deg(v) = 2|E| \quad \Rightarrow \quad \text{반드시 짝수}$
-	 - 이는 **Step 2의 결과(홀수)와 모순**이다.
+	- 그런데 악수 정리에 의해: $\sum_{v \in V}\deg(v) = 2|E| \quad \Rightarrow \quad \text{반드시 짝수}$
+	- 이는 **Step 2의 결과(홀수)와 모순**이다.
 
 - **Step 4. 결론**
 	- 귀류 가정이 틀렸으므로:

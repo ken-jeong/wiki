@@ -5,12 +5,12 @@ type:
   - Index
 tags: []
 draft: false
-date: 2026-11-13
+date: 2026-11-18
 prev:
 next:
 ---
 # Vault
-> **Computing**은 지식을 주제별로 분류하고, **PARA**는 자료를 활용 상태에 따라 분류한다.
+> **Computing**은 지식을 주제별로 분류하고, **PARA**는 자료를 활용 상태에 따라 분류하며, **RAW**는 세미나와 외부 강의 기록을 보관한다.
 
 > [!note]- Computing
 > ACM Computing Classification System을 참고한 주제별 분류
@@ -18,7 +18,7 @@ next:
 > - [[C1_Mathematics/index|C1_Mathematics]] — 미적분학, 선형대수학, 확률과 통계
 > - [[C2_Computation/index|C2_Computation]] — 이산수학, 자료구조, 알고리즘, 최적화
 > - [[C3_Hardware/index|C3_Hardware]] — 하드웨어 기초, 논리회로, 컴퓨터구조
-> - [[C4_Systems/index|C4_Systems]] — 유닉스, 데이터베이스, 운영체제, 임베디드 시스템, 시스템 프로그래밍, 지식 시스템
+> - [[C4_Systems/index|C4_Systems]] — 유닉스, 데이터베이스, 운영체제, 임베디드 시스템, 시스템 프로그래밍
 > - [[C5_Networks/index|C5_Networks]] — 네트워크 프로그래밍, 컴퓨터 네트워크, AWS·NAVER Cloud
 > - [[C6_Software/index|C6_Software]] — Git·오픈소스, 프로그래밍 언어, 프론트엔드, 소프트웨어 공학, 웹 서비스
 > - [[C7_Methodologies/index|C7_Methodologies]] — 인공지능, PyTorch, 예측·인과추론·강화학습, LLM, MLOps, NAVER Cloud AI
@@ -26,10 +26,11 @@ next:
 
 > [!note]- PARA
 > 자료의 활용 상태에 따른 분류
-> - **P1_Project** — 목표와 완료 시점이 있는 현재 프로젝트
-> - **P2_Area** — 완료 시점 없이 지속적으로 관리할 영역
-> - **P3_Resource** — 재사용할 자료
-> - **P4_Archives** — 완료되었거나 현재 사용하지 않는 자료
+> - **P1_Projects** — 목표와 완료 시점이 있는 현재 프로젝트
+> - **P2_Research** — 지속적으로 탐구·정리하는 연구 및 참고 자료
+> - **P3_Archives** — 완료되었거나 현재 사용하지 않는 보관 자료
 
-> [!note]- 세미나
-> - [[X1_Seminars/index|Seminar]] — 커리어, 취업 준비, 개발과 인프라, AI와 연구, 창업과 비즈니스, 대학과 학습
+> [!note]- RAW
+> 세미나·특강과 외부 공개 강의 기록
+> - [[R1_Seminars/index|R1_Seminars]] — 커리어, 취업 준비, 개발과 인프라, AI와 연구, 창업과 비즈니스, 대학과 학습
+> - **R2_Open Lectures** — 데이터베이스, 지식 그래프, C, Python, 정보처리기사

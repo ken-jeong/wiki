@@ -582,7 +582,7 @@ cf. Jakarta Tags 3.0 공식 문서의 core 선언:
 ```
 
 결과:
-```text
+```
 도시 목록: Seoul, Tokyo, NewYork, Toronto
 ```
 

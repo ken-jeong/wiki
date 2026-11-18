@@ -5,7 +5,7 @@ type:
   - Index
 tags: []
 draft: false
-date: 2026-11-13
+date: 2026-11-18
 prev:
 next:
 ---

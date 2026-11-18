@@ -113,8 +113,8 @@ val batteryStatus = registerReceiver(
 ```
 
 - 반환된 인텐트에서 엑스트라 값 추출:
-    - `EXTRA_STATUS` → 충전 상태 파악 (예: `BATTERY_STATUS_CHARGING`이면 충전 중)
-    - `EXTRA_PLUGGED` → **USB(저속 충전)**, **AC(고속 충전)** 구분
+	- `EXTRA_STATUS` → 충전 상태 파악 (예: `BATTERY_STATUS_CHARGING`이면 충전 중)
+	- `EXTRA_PLUGGED` → **USB(저속 충전)**, **AC(고속 충전)** 구분
 
 - 충전량 계산:
-    - `EXTRA_LEVEL`(현재 충전량) ÷ `EXTRA_SCALE`(최대 충전량) × 100 = 배터리 %
+	- `EXTRA_LEVEL`(현재 충전량) ÷ `EXTRA_SCALE`(최대 충전량) × 100 = 배터리 %

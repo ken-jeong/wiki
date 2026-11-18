@@ -43,7 +43,7 @@ $$A = U \Sigma V^T$$
 
 ### 1.2. 기하학적 의미
 - SVD는 어떤 선형 변환(행렬 $A$)을 행하더라도,
-- 이를 **회전(Rotation, $V^T$) $\rightarrow$ 스케일링(Scaling, $\Sigma$) $\rightarrow$ 회전(Rotation, $U$)**의 세 단계로 쪼개어 설명할 수 있음을 의미한다.
+- 이를 **회전(Rotation, $V^T$) → 스케일링(Scaling, $\Sigma$) → 회전(Rotation, $U$)**의 세 단계로 쪼개어 설명할 수 있음을 의미한다.
 
 ### cf. Truncated SVD (절단된 SVD)
 - SVD를 실무에 적용할 때는 전체 특이값 중 가장 크기가 큰 $k$개만 남기고 나머지를 버리는 **Truncated SVD**를 주로 사용한다.

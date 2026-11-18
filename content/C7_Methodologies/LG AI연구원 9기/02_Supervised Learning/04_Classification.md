@@ -52,8 +52,8 @@ next:
 	2. 각 샘플마다 예측
 		- $\hat{y}_i =  \text{sign}(z_i) = \text{sign}(\mathbf{a} \cdot \mathbf{x}_i + b)$
 	3. 예측 후 잘못 분류된 경우에만 가중치를 업데이트
-	    - $\mathbf{a} := \mathbf{a} + \eta(y_i - \hat{y}_i)\mathbf{x}_i$
-	    - $b := b + \eta(y_i - \hat{y}_i)$
+		- $\mathbf{a} := \mathbf{a} + \eta(y_i - \hat{y}_i)\mathbf{x}_i$
+		- $b := b + \eta(y_i - \hat{y}_i)$
 	
 	- **장점**: 해가 있으면 반드시 수렴하며, 매우 단순하다.
 	- **단점**: 해가 없으면 영원히 멈추지 않고, 해가 없는지 알 수도 없다.

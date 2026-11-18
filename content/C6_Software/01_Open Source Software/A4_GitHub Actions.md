@@ -9,7 +9,7 @@ prev:
   - "[[A3_Open Source License]]"
 next:
 ---
-* [github-actions](https://jyheo.github.io/github-lecture/github-actions.html)
+- [github-actions](https://jyheo.github.io/github-lecture/github-actions.html)
 
 ## 1. GitHub Actions 기본 개념
 - **GitHub Actions란?**
@@ -144,8 +144,8 @@ jobs:
 
 ### 4.5. Context
 - **github**: workflow 실행 정보
-    - `github.actor`: 실행자
-    - `github.ref`: 브랜치/태그
+	- `github.actor`: 실행자
+	- `github.ref`: 브랜치/태그
 - **env**: 환경 변수
 - **job**: 현재 job 정보
 - **steps**: step 정보

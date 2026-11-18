@@ -113,10 +113,10 @@ void bubble_sort(int arr[], int n) {
 #### (1) 병합 정렬(merge)
 ![](https://velog.velcdn.com/images/ajm0718/post/ff3054db-5bfb-4358-a7a3-26d29c3f438d/image.gif)
 - **분할 정복**(divide and conquer)
-    - **분할**: 분할 비용 $n-1$
-    - **정복/병합**: 각 recursion depth($⌈log_2n⌉$)마다 병합 비용 $n$
-    - **시간 복잡도**: $O(n\log{n})=n+n\log{n}$
-    - **공간 복잡도**: 병합 시 정렬된 배열을 따로 생성하는 비제자리 정렬 $O(n)$
+	- **분할**: 분할 비용 $n-1$
+	- **정복/병합**: 각 recursion depth($⌈log_2n⌉$)마다 병합 비용 $n$
+	- **시간 복잡도**: $O(n\log{n})=n+n\log{n}$
+	- **공간 복잡도**: 병합 시 정렬된 배열을 따로 생성하는 비제자리 정렬 $O(n)$
 
 ```c
 void merge_sort(int arr[], int low, int high) {

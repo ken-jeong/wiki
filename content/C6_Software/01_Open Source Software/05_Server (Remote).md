@@ -28,8 +28,8 @@ next:
 - **깃 호스팅 서비스**: 깃허브(GitHub)와 같은 전문 호스팅 서비스를 이용하면 서버 관리 없이 쉽게 원격 저장소를 운영할 수 있다.
 
 - **깃허브 저장소 생성**
-    1. 저장소의 소유자(개인 계정)와 이름을 지정한다. 저장소 이름은 소유자 내에서 중복될 수 없다.
-    2. 저장소 주소는 `https://github.com/사용자이름/저장소이름` 형식을 가진다.
+	1. 저장소의 소유자(개인 계정)와 이름을 지정한다. 저장소 이름은 소유자 내에서 중복될 수 없다.
+	2. 저장소 주소는 `https://github.com/사용자이름/저장소이름` 형식을 가진다.
 
 - *cf. 원격 저장소 서비스*
 	- GitHub(깃허브)
@@ -65,9 +65,9 @@ next:
 	2. 먼저 로컬 저장소를 생성하고, 이후 원격 저장소를 연결하는 방법 → [[05_Server (Remote)#cf. 최초 동기화 Local to Remote|Dev.]], [[06_Branch]]
 
 - **원격 저장소 등록**: 로컬 저장소와 원격 저장소를 연결하는 과정이다.
-    1. **로컬 저장소 생성**: `git init` 명령어로 내 컴퓨터에 깃 저장소를 만든다.
-    2. **원격 저장소 추가**: `git remote add <별칭> <원격저장소URL>` 명령어로 원격 저장소를 등록한다. 보통 `origin`이라는 별칭을 사용한다.
-    3. **연결 확인**: `git remote -v` 명령어로 연결된 원격 저장소의 목록과 주소를 확인한다.
+	1. **로컬 저장소 생성**: `git init` 명령어로 내 컴퓨터에 깃 저장소를 만든다.
+	2. **원격 저장소 추가**: `git remote add <별칭> <원격저장소URL>` 명령어로 원격 저장소를 등록한다. 보통 `origin`이라는 별칭을 사용한다.
+	3. **연결 확인**: `git remote -v` 명령어로 연결된 원격 저장소의 목록과 주소를 확인한다.
 
 ```sh
 git remote # 원격 저장소의 별칭
@@ -140,11 +140,11 @@ git merge origin/master
 - **충돌 방지 원칙**: 깃은 원격 저장소보다 내 로컬 저장소가 최신 상태일 때만 `push`를 허용하여 충돌을 최소화한다.
 
 - **권장 작업 순서**: ==pull → 코딩 → commit → pull → push==
-    1. `pull`: 작업을 시작하기 전, 서버의 최신 내용을 받아온다.
-    2. `coding`: 코드를 수정하고 기능을 개발한다.
-    3. `commit`: 작업한 내용을 로컬 저장소에 기록한다.
-    4. `pull`: 내 코드를 서버에 올리기 직전, 다른 사람이 올린 최신 코드가 있는지 다시 확인하고 받아온다.
-    5. `push`: 모든 변경 사항이 통합된 내 코드를 서버에 올린다.
+	1. `pull`: 작업을 시작하기 전, 서버의 최신 내용을 받아온다.
+	2. `coding`: 코드를 수정하고 기능을 개발한다.
+	3. `commit`: 작업한 내용을 로컬 저장소에 기록한다.
+	4. `pull`: 내 코드를 서버에 올리기 직전, 다른 사람이 올린 최신 코드가 있는지 다시 확인하고 받아온다.
+	5. `push`: 모든 변경 사항이 통합된 내 코드를 서버에 올린다.
 
 ## 8. 정리
 - 깃은 코드 이력 관리뿐만 아니라, 원격 저장소를 통해 강력한 **협업 도구**로 사용된다.
@@ -152,9 +152,9 @@ git merge origin/master
 - `push`, `pull`, `fetch` 등의 명령어를 통해 로컬과 원격 저장소의 데이터를 동기화하며 개발을 진행한다.
 
 ## Dev.
-* [git-remote-github](https://jyheo.github.io/github-lecture/git-remote-github.html)
-* [github-issue](https://jyheo.github.io/github-lecture/github-issue.html)
-* [git-flow](https://jyheo.github.io/github-lecture/git-flow.html)
+- [git-remote-github](https://jyheo.github.io/github-lecture/git-remote-github.html)
+- [github-issue](https://jyheo.github.io/github-lecture/github-issue.html)
+- [git-flow](https://jyheo.github.io/github-lecture/git-flow.html)
 
 ### cf. 최초 동기화: Local to Remote
 - 이미 작업하던 로컬 Git 저장소가 있을 때, 새로 생성한 비어있는 원격 저장소(GitHub 등)에 코드를 올리는 과정이다.
@@ -183,16 +183,16 @@ git push -u origin master
 - 내가 직접 수정할 권한이 없는 공개된 오픈 소스 프로젝트 등에 기여하고 싶을 때 사용한다.
 
 - **작업 절차**
-    1. **Fork**: 원본 프로젝트 저장소를 내 계정으로 그대로 복제한다.
-    2. **수정**: 내 계정으로 복제된 저장소(forked repository)에서 코드를 수정하거나 새로운 기능을 추가하고 커밋(commit)한다.
-    3. **Pull Request 생성**: 수정한 내용을 원본 프로젝트에 반영해달라고 Pull Request를 보낸다.
+	1. **Fork**: 원본 프로젝트 저장소를 내 계정으로 그대로 복제한다.
+	2. **수정**: 내 계정으로 복제된 저장소(forked repository)에서 코드를 수정하거나 새로운 기능을 추가하고 커밋(commit)한다.
+	3. **Pull Request 생성**: 수정한 내용을 원본 프로젝트에 반영해달라고 Pull Request를 보낸다.
 	- **결정**: 원본 프로젝트의 관리자는 제안된 코드를 검토(리뷰)한 후, 병합(merge)할지 여부를 결정한다.
 
 #### (2) 프로젝트 내에서 브랜치(Branch)를 병합할 때
 - 하나의 프로젝트를 여러 명의 팀원(공동 작업자)과 함께 개발할 때 안전하고 체계적인 코드 통합을 위해 사용된다.
 
 - **작업 절차**
-    1. **브랜치 생성 및 작업**: `main` 또는 `master` 브랜치에서 새로운 기능 개발이나 버그 수정을 위한 별도의 브랜치(예: `feature/login`)를 만든다.
-    2. **작업 완료 후 Push**: 해당 브랜치에서 작업을 완료한 뒤, 원격 저장소에 `push`한다.
-    3. **Pull Request 생성**: 작업한 브랜치를 `main` 브랜치에 병합(merge)해달라고 동료 작업자에게 Pull Request를 보낸다.
+	1. **브랜치 생성 및 작업**: `main` 또는 `master` 브랜치에서 새로운 기능 개발이나 버그 수정을 위한 별도의 브랜치(예: `feature/login`)를 만든다.
+	2. **작업 완료 후 Push**: 해당 브랜치에서 작업을 완료한 뒤, 원격 저장소에 `push`한다.
+	3. **Pull Request 생성**: 작업한 브랜치를 `main` 브랜치에 병합(merge)해달라고 동료 작업자에게 Pull Request를 보낸다.
 	- **결정**: 동료 작업자들은 변경된 코드를 함께 리뷰하고, 피드백을 주고받는다. 리뷰가 완료되고 문제가 없다고 판단되면 main 브랜치로 병합하여 모든 팀원의 작업 내용을 통합한다.

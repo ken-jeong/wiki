@@ -5,7 +5,7 @@ type:
   - Index
 tags: []
 draft: false
-date: 2026-11-13
+date: 2026-11-18
 prev:
 next:
 ---
@@ -134,9 +134,20 @@ next:
 
 > [!note]- NAVER Cloud AI
 > AI 리터러시와 소버린 AI, 클라우드 AI 인프라, 개발 환경 구축과 모델 API 실습
-> - [[C7_Methodologies/NAVER Cloud AI/01_AI 리터러시와 소버린 AI|01_AI 리터러시와 소버린 AI]]
-> - [[C7_Methodologies/NAVER Cloud AI/02_AI 인프라 및 개발 라이브러리 이해|02_AI 인프라 및 개발 라이브러리 이해]]
-> - [[C7_Methodologies/NAVER Cloud AI/03_Translation & Speech API|03_Translation & Speech API]]
-> - [[C7_Methodologies/NAVER Cloud AI/04_LLM API|04_LLM API]]
+>
+> **기초 교육**
+> - [[C7_Methodologies/NAVER Cloud AI/B1_AI의 발전 흐름|B1_AI의 발전 흐름]]
+> - [[C7_Methodologies/NAVER Cloud AI/B2_규칙에서 머신러닝으로|B2_규칙에서 머신러닝으로]]
+> - [[C7_Methodologies/NAVER Cloud AI/B3_데이터 수집과 정제|B3_데이터 수집과 정제]]
+> - [[C7_Methodologies/NAVER Cloud AI/B4_소버린 AI와 독자 모델|B4_소버린 AI와 독자 모델]]
+> - [[C7_Methodologies/NAVER Cloud AI/B5_생성형 AI와 환각, 프롬프트 기초|B5_생성형 AI와 환각, 프롬프트 기초]]
+>
+> **실무 실습**
+> - [[C7_Methodologies/NAVER Cloud AI/01차시_실습_네이버클라우드AI환경구축|01차시_실습_네이버클라우드AI환경구축]]
+> - [[C7_Methodologies/NAVER Cloud AI/02차시_실습_웹API_서버_ML|02차시_실습_웹API_서버_ML]]
+> - [[C7_Methodologies/NAVER Cloud AI/03회차_실습_문서|03회차_실습_문서]]
+> - [[C7_Methodologies/NAVER Cloud AI/04회차_실습_문서|04회차_실습_문서]]
+> - [[C7_Methodologies/NAVER Cloud AI/05회차_실습_문서|05회차_실습_문서]]
+> - [[C7_Methodologies/NAVER Cloud AI/06회차_실습_문서|06회차_실습_문서]]
 
 ![NAVER Cloud](https://img.shields.io/badge/NAVER_Cloud-03C75A?logo=naver&logoColor=white)
