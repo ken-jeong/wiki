@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="452" viewBox="0 0 1280 452" role="img" aria-labelledby="title desc">
+  <title id="title">Archive 위키 핵심 기능</title>
+  <desc id="desc">Archive 위키의 핵심 기능. copy.sh가 Obsidian vault에서 draft: false인 Markdown 노트만 폴더 구조 그대로 가져온다. 노트는 ACM CCS를 참고한 C0~C8 주제 분류와 PARA·RAW로 정리되어 폴더·태그 페이지와 검색으로 탐색한다. 위키링크·콜아웃·KaTeX 수식으로 쓴 노트를 그래프 뷰·백링크·목차·링크 미리보기로 연결해 읽는다. 이미지 등 첨부 파일은 별도로 복사해야 한다.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; fill: #1A2028; }
+    .heading { font-size: 27px; font-weight: 700; }
+    .subtitle { font-size: 19px; fill: #525862; }
+    .body { font-size: 19px; }
+    .label { font-size: 18px; font-weight: 700; fill: #2D56B6; }
+    .role { font-size: 17px; font-weight: 700; fill: #2D56B6; }
+    .icon { fill: none; stroke: #2D56B6; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="1280" height="452" rx="16" fill="#F1F4F8"/>
+  <g transform="translate(24 24)">
+    <rect width="400" height="404" rx="14" fill="#FFFFFF" stroke="#DBDEE3"/>
+    <rect x="24" y="24" width="64" height="64" rx="16" fill="#E7EDF9"/>
+    <g class="icon" transform="translate(32 32)" aria-hidden="true"><path d="M4 12a3 3 0 0 1 3-3h11l5 6h18a3 3 0 0 1 3 3v22a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3ZM24 21v14m-6-6 6 6 6-6"/></g>
+    <text x="104" y="63" class="label">01 | 노트 동기화</text>
+    <text x="24" y="132" class="heading">Obsidian에서 가져오기</text>
+    <text x="24" y="164" class="subtitle">copy.sh · draft: false 문서만</text>
+    <path d="M24 190H376" stroke="#DBDEE3"/>
+    <text x="24" y="226" class="role">동기화</text>
+    <text x="24" y="257" class="body">vault 폴더 구조 유지 · content 교체</text>
+    <text x="24" y="315" class="role">공개 범위</text>
+    <text x="24" y="346" class="body">private·templates 제외 · 첨부 별도</text>
+  </g>
+  <g transform="translate(440 24)">
+    <rect width="400" height="404" rx="14" fill="#FFFFFF" stroke="#DBDEE3"/>
+    <rect x="24" y="24" width="64" height="64" rx="16" fill="#E7EDF9"/>
+    <g class="icon" transform="translate(32 32)" aria-hidden="true"><rect x="17" y="4" width="14" height="10" rx="2"/><rect x="3" y="34" width="14" height="10" rx="2"/><rect x="17" y="34" width="14" height="10" rx="2"/><rect x="31" y="34" width="14" height="10" rx="2"/><path d="M24 14v20M10 34v-9h28v9"/></g>
+    <text x="104" y="63" class="label">02 | 지식 분류</text>
+    <text x="24" y="132" class="heading">주제별 지식 지도</text>
+    <text x="24" y="164" class="subtitle">ACM CCS 참고 C0~C8 · PARA · RAW</text>
+    <path d="M24 190H376" stroke="#DBDEE3"/>
+    <text x="24" y="226" class="role">Computing</text>
+    <text x="24" y="257" class="body">교양·수학 · 시스템 · AI·MLOps</text>
+    <text x="24" y="315" class="role">탐색</text>
+    <text x="24" y="346" class="body">탐색기 · 폴더·태그 페이지 · 검색</text>
+  </g>
+  <g transform="translate(856 24)">
+    <rect width="400" height="404" rx="14" fill="#FFFFFF" stroke="#DBDEE3"/>
+    <rect x="24" y="24" width="64" height="64" rx="16" fill="#E7EDF9"/>
+    <g class="icon" transform="translate(32 32)" aria-hidden="true"><circle cx="10" cy="11" r="5"/><circle cx="37" cy="9" r="4"/><circle cx="25" cy="27" r="5"/><circle cx="9" cy="39" r="4"/><circle cx="39" cy="38" r="4"/><path d="M14 14l7 9M34 12l-6 11M21 30l-9 7M29 30l7 6"/></g>
+    <text x="104" y="63" class="label">03 | 연결 탐색</text>
+    <text x="24" y="132" class="heading">노트를 연결해 읽기</text>
+    <text x="24" y="164" class="subtitle">그래프 뷰 · 백링크 · 목차</text>
+    <path d="M24 190H376" stroke="#DBDEE3"/>
+    <text x="24" y="226" class="role">작성 문법</text>
+    <text x="24" y="257" class="body">위키링크 · 콜아웃 · KaTeX 수식</text>
+    <text x="24" y="315" class="role">읽기 도구</text>
+    <text x="24" y="346" class="body">링크 미리보기 · 다크·리더 모드</text>
+  </g>
+</svg>

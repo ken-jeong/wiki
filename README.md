@@ -1,22 +1,19 @@
 # Archive
 
-개인 학습 기록과 기술 노트를 정리하는 Quartz 4 기반 디지털 가든입니다.
+Quartz 4 기반 [개인 학습·기술 노트](https://ken-jeong.github.io/wiki/).
 
-[사이트 방문](https://ken-jeong.pages.dev/)
+![Archive 위키 핵심 기능](docs/assets/key-features.svg)
 
 ![노트 그래프 뷰](assets/graph-view.png)
 
 ## 로컬 실행
 
-Node.js 22 이상, npm 10.9.2 이상이 필요합니다.
+Node.js 22.22.0 이상, npm 10.9.2 이상이 필요합니다.
+
+`content/`에 노트·홈(`index.md`)을 추가하고 실행한다.
 
 ```bash
 npm ci
-```
-
-`content/`에 Markdown 노트와 홈 문서(`index.md`)를 추가한 뒤 실행합니다.
-
-```bash
 npx quartz build --serve
 ```
 
@@ -39,7 +36,12 @@ npx quartz build --serve
 - `quartz.layout.ts`: 화면 레이아웃
 - `quartz/styles/custom.scss`: 사용자 정의 스타일
 
-배포 전 `quartz.config.ts`의 `baseUrl`을 실제 사이트 주소에 맞춰 설정하세요.
+![Archive 위키 아키텍처](docs/assets/architecture.svg)
+
+## 배포
+
+`v4` push 또는 Actions의 `Deploy to GitHub Pages` 수동 실행으로 배포한다.
+Settings → Pages → Source는 `GitHub Actions`, `quartz.config.ts`의 `baseUrl`은 `ken-jeong.github.io/wiki`.
 
 ## 라이선스
 

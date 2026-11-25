@@ -17,7 +17,7 @@ const config: QuartzConfig = {
       tagId: "G-XBEFC4KKR9",
     },
     locale: "ko-KR",
-    baseUrl: "albert-jeong.pages.dev",
+    baseUrl: "ken-jeong.github.io/wiki",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1568" height="452" viewBox="0 0 1568 452" role="img" aria-labelledby="title desc">
+  <title id="title">Archive 위키 아키텍처</title>
+  <desc id="desc">개인 학습·기술 노트를 공개하는 Quartz 4 기반 정적 사이트. Obsidian vault의 노트가 copy.sh로 content/에 복사되고 Quartz 빌드가 public/을 만들어 GitHub Actions가 GitHub Pages에 배포하는 작성·빌드·배포 흐름이며 화살표는 소스 의존성이 아니다. 빌드는 Transformer·Filter·Emitter 플러그인 순서로 Markdown을 HTML 페이지와 색인으로 바꾼다.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; fill: #1A2028; }
+    .heading { font-size: 27px; font-weight: 700; }
+    .subtitle { font-size: 19px; fill: #525862; }
+    .body { font-size: 19px; }
+    .label { font-size: 18px; font-weight: 700; fill: #2D56B6; }
+    .role { font-size: 17px; font-weight: 700; fill: #2D56B6; }
+    .icon { fill: none; stroke: #2D56B6; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="1568" height="452" rx="16" fill="#F1F4F8"/>
+  <g transform="translate(24 24)">
+    <rect width="400" height="404" rx="14" fill="#FFFFFF" stroke="#DBDEE3"/>
+    <rect x="24" y="24" width="64" height="64" rx="16" fill="#E7EDF9"/>
+    <g class="icon" transform="translate(32 32)" aria-hidden="true"><rect x="9" y="4" width="32" height="40" rx="4"/><path d="M17 4v40M23 14h11M23 22h11M23 30h7"/></g>
+    <text x="104" y="63" class="label">01 | 노트 작성</text>
+    <text x="24" y="126" class="heading">Obsidian Vault</text>
+    <text x="24" y="154" class="subtitle">iCloud 동기화 vault · Markdown</text>
+    <text x="24" y="181" class="subtitle">프런트매터 draft: false로 공개</text>
+    <path d="M24 200H376" stroke="#DBDEE3"/>
+    <text x="24" y="233" class="role">copy.sh</text>
+    <text x="24" y="264" class="body">draft 검사 · 폴더 구조 그대로 복사</text>
+    <text x="24" y="315" class="role">content/</text>
+    <text x="24" y="346" class="body">C0~C8 · P2 · R1 · 홈 index.md</text>
+  </g>
+  <g transform="translate(584 24)">
+    <rect width="400" height="404" rx="14" fill="#FFFFFF" stroke="#DBDEE3"/>
+    <rect x="24" y="24" width="64" height="64" rx="16" fill="#E7EDF9"/>
+    <g class="icon" transform="translate(32 32)" aria-hidden="true"><path d="M15 13 4 24l11 11M33 13l11 11-11 11M28 7l-8 34"/></g>
+    <text x="104" y="63" class="label">02 | 정적 사이트 생성</text>
+    <text x="24" y="126" class="heading">Quartz 4 빌드</text>
+    <text x="24" y="154" class="subtitle">Node.js 22 · TypeScript</text>
+    <text x="24" y="181" class="subtitle">npx quartz build · ko-KR</text>
+    <path d="M24 200H376" stroke="#DBDEE3"/>
+    <text x="24" y="233" class="role">Transformer · Filter</text>
+    <text x="24" y="264" class="body">OFM·GFM · KaTeX · 초안 제거</text>
+    <text x="24" y="315" class="role">Emitter</text>
+    <text x="24" y="346" class="body">노트·폴더·태그 · RSS·사이트맵</text>
+  </g>
+  <g transform="translate(1144 24)">
+    <rect width="400" height="404" rx="14" fill="#FFFFFF" stroke="#DBDEE3"/>
+    <rect x="24" y="24" width="64" height="64" rx="16" fill="#E7EDF9"/>
+    <g class="icon" transform="translate(32 32)" aria-hidden="true"><circle cx="24" cy="24" r="19"/><ellipse cx="24" cy="24" rx="8" ry="19"/><path d="M5 24h38M8 14h32M8 34h32"/></g>
+    <text x="104" y="63" class="label">03 | 배포·호스팅</text>
+    <text x="24" y="126" class="heading">GitHub Pages</text>
+    <text x="24" y="154" class="subtitle">ken-jeong.github.io/wiki</text>
+    <text x="24" y="181" class="subtitle">v4 push · 수동 실행으로 배포</text>
+    <path d="M24 200H376" stroke="#DBDEE3"/>
+    <text x="24" y="233" class="role">GitHub Actions</text>
+    <text x="24" y="264" class="body">npm ci · 빌드 · Pages 업로드</text>
+    <text x="24" y="315" class="role">브라우저</text>
+    <text x="24" y="346" class="body">SPA 이동 · 검색 · 그래프 · GA</text>
+  </g>
+  <g>
+    <text x="504" y="207" class="role" text-anchor="middle">content/</text>
+    <text x="1064" y="207" class="role" text-anchor="middle">public/</text>
+    <path d="M440 226H568m-8-6 8 6-8 6M1000 226H1128m-8-6 8 6-8 6" fill="none" stroke="#2D56B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"/>
+  </g>
+</svg>
